@@ -38,5 +38,5 @@ CREATE TABLE Comments (
     content VARCHAR(200),
     timeCreated VARCHAR(14),
     FOREIGN KEY(userID) REFERENCES Users(userID),
-    FOREIGN KEY(activityID) REFERENCES Activites(activityID)
+    FOREIGN KEY(activityID) REFERENCES Activities(activityID)
 );
