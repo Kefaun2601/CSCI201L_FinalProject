@@ -1,0 +1,482 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--web-view-ids: Detail_Page;
+}
+#Detail_Page * {
+	margin: 0;
+	padding: 0;
+}
+#Detail_Page {
+	position: absolute;
+	box-sizing: border-box;
+	background: #E5E5E5;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	opacity: 1;
+	--web-view-name: Detail Page;
+	--web-view-id: Detail_Page;
+	--web-scale-to-fit: true;
+	--web-enable-deep-linking: true;
+}
+#Rectangle_4 {
+	opacity: 1;
+	fill: rgba(250,250,240,1);
+	stroke: rgb(112, 112, 112);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_4 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 1080px;
+	left: 0px;
+	top: -1px;
+}
+#Group_4 {
+	opacity: 1;
+	position: absolute;
+	width: 1920px;
+	height: 413px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_3 {
+	opacity: 1;
+	position: absolute;
+	width: 1920px;
+	height: 413px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Rectangle_1 {
+	opacity: 1;
+	fill: rgba(157,21,54,1);
+	stroke: rgb(112, 112, 112);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_1 {
+	position: absolute;
+	overflow: visible;
+	width: 1921px;
+	height: 414px;
+	left: 0px;
+	top: 0px;
+}
+#Group_2 {
+	opacity: 1;
+	position: absolute;
+	width: 582px;
+	height: 145px;
+	left: 266px;
+	top: 83px;
+	overflow: visible;
+}
+#Group_1 {
+	opacity: 1;
+	position: absolute;
+	width: 582px;
+	height: 145px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#USCCardinal {
+	opacity: 1;
+	position: absolute;
+	width: 582px;
+	height: 145px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#USCCardinal_A3_Rectangle_3 {
+	opacity: 1;
+	fill: url(#USCCardinal_A3_Rectangle_4_pattern);
+}
+.USCCardinal_A3_Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	width: 582px;
+	height: 145px;
+	left: 0px;
+	top: 0px;
+}
+#EventSc {
+	opacity: 1;
+	position: absolute;
+	left: 1362px;
+	top: 94px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 273px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Sukhumvit Set;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 78px;
+	color: rgba(255,255,255,1);
+}
+#Rectangle_2 {
+	opacity: 1;
+	fill: rgba(2,2,2,1);
+	stroke: rgb(112, 112, 112);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 60px;
+	left: 0px;
+	top: 0px;
+}
+#Login {
+	opacity: 1;
+	position: absolute;
+	left: 1511px;
+	top: 8px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 88px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: AppleGothic;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: rgba(248,240,240,1);
+}
+#v {
+	opacity: 1;
+	position: absolute;
+	left: 1501px;
+	top: 557px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: AppleGothic;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: rgba(248,240,240,1);
+}
+#Path_1 {
+	opacity: 1;
+	fill: url(#Path_1_A3_Path_2_pattern);
+	stroke: rgb(255, 255, 255);
+	stroke-width: 20px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Path_1 {
+	transform: matrix(1,0,0,1,0,0);
+	overflow: visible;
+	position: absolute;
+	top: 1025px;
+	left: 332px;
+	width: 1266px;
+	height: 0px;
+}
+#Register {
+	opacity: 1;
+	position: absolute;
+	left: 1681px;
+	top: 8px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 132px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: AppleGothic;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: rgba(248,240,240,1);
+}
+#Group_13 {
+	opacity: 1;
+	position: absolute;
+	width: 277.005px;
+	height: 56.191px;
+	left: 1233.797px;
+	top: 231.824px;
+	overflow: visible;
+}
+#Rectangle_5 {
+	opacity: 1;
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.553));
+	fill: rgba(250,250,240,1);
+	stroke: rgb(214, 214, 172);
+	stroke-width: 4px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_5 {
+	position: absolute;
+	overflow: visible;
+	width: 303.004px;
+	height: 82.191px;
+	left: 0px;
+	top: 0px;
+}
+#Back_to_map {
+	opacity: 1;
+	position: absolute;
+	left: 83.004px;
+	top: 12.191px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 176px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: AppleGothic;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(5,5,5,1);
+}
+#iconfinder_map_2561464 {
+	opacity: 1;
+	fill: url(#iconfinder_map_2561464_A3_Rectangle_8_pattern);
+}
+.iconfinder_map_2561464 {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 15.203px;
+	top: 8.176px;
+}
+#Group_16 {
+	opacity: 1;
+	position: absolute;
+	width: 1266px;
+	height: 682px;
+	left: 327px;
+	top: 331px;
+	overflow: visible;
+}
+#Group_14 {
+	opacity: 1;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	left: -4307px;
+	top: -331px;
+	overflow: visible;
+}
+#Group_30 {
+	opacity: 1;
+	position: absolute;
+	width: 1266px;
+	height: 682px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Rectangle_7 {
+	opacity: 1;
+	fill: rgba(244,244,244,1);
+	stroke: rgb(188, 174, 174);
+	stroke-width: 1px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_7 {
+	position: absolute;
+	overflow: visible;
+	width: 1266px;
+	height: 682px;
+	left: 0px;
+	top: 0px;
+}
+#iconfinder_calendar_1287530 {
+	opacity: 1;
+	fill: url(#iconfinder_calendar_1287530_A3_Rectangle_11_pattern);
+}
+.iconfinder_calendar_1287530 {
+	position: absolute;
+	overflow: visible;
+	width: 221px;
+	height: 221px;
+	left: 62px;
+	top: 35px;
+}
+#Event_Name {
+	opacity: 1;
+	position: absolute;
+	left: 322px;
+	top: 54px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 322px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Avenir;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 56px;
+	color: rgba(100,95,95,1);
+}
+#DATE__TIME__Location_ {
+	opacity: 1;
+	position: absolute;
+	left: 322px;
+	top: 140px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Helvetica Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(100,95,95,1);
+}
+#Lorem_ipsum_dolor_sit_amet__co {
+	opacity: 1;
+	position: absolute;
+	left: 62px;
+	top: 341px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 1128px;
+	height: 251px;
+	text-align: left;
+	font-family: Helvetica Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	color: rgba(100,95,95,1);
+}
+#Initiator_ {
+	opacity: 1;
+	position: absolute;
+	left: 885px;
+	top: 173px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 196px;
+	height: 35px;
+	text-align: left;
+	font-family: Helvetica Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(100,95,95,1);
+}
+#Interested {
+	opacity: 1;
+	position: absolute;
+	left: 885px;
+	top: 274px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 108px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Helvetica Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(100,95,95,1);
+}
+#iconfinder_JD_04_2625523 {
+	opacity: 1;
+	fill: url(#iconfinder_JD_04_2625523_A3_Rectangle_13_pattern);
+}
+.iconfinder_JD_04_2625523 {
+	position: absolute;
+	overflow: visible;
+	width: 91px;
+	height: 91px;
+	left: 885px;
+	top: 95px;
+}
+#iconfinder_JD_06_2625478 {
+	opacity: 1;
+	fill: url(#iconfinder_JD_06_2625478_A3_Rectangle_15_pattern);
+}
+.iconfinder_JD_06_2625478 {
+	position: absolute;
+	overflow: visible;
+	width: 94px;
+	height: 94px;
+	left: 871px;
+	top: 196px;
+}
+#iconfinder_JD_08_2625520 {
+	opacity: 1;
+	fill: url(#iconfinder_JD_08_2625520_A3_Rectangle_17_pattern);
+}
+.iconfinder_JD_08_2625520 {
+	position: absolute;
+	overflow: visible;
+	width: 95px;
+	height: 95px;
+	left: 959px;
+	top: 195px;
+}
+#iconfinder_JD_09_2625479 {
+	opacity: 1;
+	fill: url(#iconfinder_JD_09_2625479_A3_Rectangle_19_pattern);
+}
+.iconfinder_JD_09_2625479 {
+	position: absolute;
+	overflow: visible;
+	width: 100px;
+	height: 100px;
+	left: 1041px;
+	top: 188px;
+}
