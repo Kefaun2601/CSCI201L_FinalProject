@@ -7,20 +7,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import utility.DBCredentials;
+
 /**
  * Servlet implementation class Register
  */
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Register() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	// Database Connection Username
+	@SuppressWarnings("unused")
+	private static final String dbusername = DBCredentials.getUsername();
+	// Database Connection Password
+	@SuppressWarnings("unused")
+	private static final String dbpassword = DBCredentials.getPassword();
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Register() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
