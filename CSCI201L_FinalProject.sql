@@ -26,7 +26,7 @@ CREATE TABLE Activities (
     startTime VARCHAR(6),
     endDate VARCHAR(8),
     endTime VARCHAR(6),
-    timeCreated VARCHAR(14),
+    timeCreated TIMESTAMP,
     picture VARCHAR(45),
     FOREIGN KEY(userID) REFERENCES Users(userID)
 );
