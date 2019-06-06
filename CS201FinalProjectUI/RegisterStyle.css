@@ -363,6 +363,7 @@ body {
 	height: 53px;
 	left: 256px;
 	top: 522.96px;
+	cursor: pointer;
 }
 #Register_A6_Text_7 {
 	opacity: 1;
@@ -382,6 +383,7 @@ body {
 	font-size: 36px;
 	color: rgba(255,255,255,1);
 	letter-spacing: 0.5px;
+	cursor: pointer;
 }
 #Confirm_Password {
 	opacity: 1;
@@ -419,4 +421,27 @@ body {
 	height: 57px;
 	left: 121px;
 	top: 418.862px;
+}
+
+.registerInput {
+	width: 537px;
+	height: 57px;
+	padding: 0px 5px 0px 5px;
+	margin: 0;
+	position: absolute;
+	border: 0.5px solid black;
+	font-family: Sukhumvit Set;
+    font-style: normal;
+    font-size: 30px;
+    color: rgba(100,95,95,1);
+    letter-spacing: 0.1px;
+}
+
+.registerInput:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(248,240,240,1);
 }
