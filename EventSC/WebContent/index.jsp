@@ -1455,7 +1455,7 @@ window.application = application;
 		</rect>
 	</svg>
 	<div id="Group_7">
-		<button id="New_Event_Button"></button>
+		<button id="New_Event_Button" onclick="window.location.href ='newevent.jsp';"></button>
 		<div id="Group_6_A0_Group_8">
 			<svg class="Rectangle_5">
 				<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="230.005" height="56.191">
@@ -1491,7 +1491,7 @@ window.application = application;
 		</svg>
 	</div>
 	<div id="Group_11">
-		<button id="List_View_Button"></button>
+		<button id="List_View_Button" onclick="window.location.href ='list.jsp';"></button>
 		<svg class="Rectangle_5_A0_Rectangle_14">
 			<rect id="Rectangle_5_A0_Rectangle_14" rx="0" ry="0" x="0" y="0" width="230.005" height="56.191">
 			</rect>
