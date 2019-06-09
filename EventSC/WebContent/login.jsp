@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>EventSC</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="LoginStyle.css"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>EventSC</title>
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="LoginStyle.css"/>
+	<script>
+		function validateForm() {
+			// set error message div to empty here
+			
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "Login?" +
+						"username=" + document.getElementsByName("email")[0].value +
+						"&password=" + document.getElementsByName("password")[0].value
+						, false);
+			xhttp.send();
+			if (xhttp.responseText.trim() == "1") {
+				// set error message div to "Incorrect password." here
+				return false;
+			}
+			else if (xhttp.responseText.trim() == "2") {
+				// set error message div to "This user does not exist." here
+				return false;
+			}
+			return true;
+		}
+	</script>
 </head>
 <body>
 <div id="Login">

@@ -10,29 +10,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<title>EventSC</title>
 	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="DetailStyle.css"/>
-	<%  //String parameter=request.getParameter("activityID");
-		//int activityID=Integer.parseInt(parameter);
-		ArrayList<Activity> temp = Helper.getAllActivities(); // CHANGE TO getActivityById();
-		String tempName="";
-		String tempDescription="";
-		float templat=0;
-		float templon=0;
-		String tempStart="";
-		String tempEnd="";
-		for(int i=0;i<temp.size();i++){
-			if(true)//ajust it after setup all links which should be (temp.get(i).getActivityID()==activityID)
-			{
-				tempName=temp.get(i).getTitle();
-				tempDescription =temp.get(i).getDescription();
-				templat=temp.get(i).getLat();
-				templon=temp.get(i).getLon();
-				tempStart=temp.get(i).getStartDate()+" "+temp.get(i).getStartTime();
-				tempEnd=temp.get(i).getEndDate()+" "+temp.get(i).getEndTime();
-				
-				break;
-			}
-		}
-	
+	<%  
+	int activityID=Integer.parseInt(request.getParameter("activityID"));
+	Activity activity = Helper.getActivityByID(activityID);
 	%>
 	<script>
 			
@@ -50,7 +30,7 @@
 		          
 		    	var myLatlng = {lat: latitude, lng: longitude};
 		    	var marker=new google.maps.Marker({
-    		        position: new google.maps.LatLng('<%=templat%>', '<%=templon%>'),
+    		        position: new google.maps.LatLng('<%=activity.getLat()%>', '<%=activity.getLon()%>'),
     		        map: map
     		      });
 		    	
@@ -66,6 +46,16 @@
 		</script>
 </head>
 <body>
+
+	<%
+	int userID = -1;
+	if (session.getAttribute("userID") != null) {
+		String userIDStr = "" + session.getAttribute("userID");
+		if (userIDStr != null && !userIDStr.trim().equals("")) {
+			userID = Integer.parseInt(userIDStr.trim());
+		}
+	}
+	%>
 
 <div id="Detail_Page">
 	<div id="Group_18">
@@ -110,14 +100,14 @@
 				<img id="EventPic" src="img/event_icon7.png">
 			</div>
 			<div id="Event_Name">
-				<span><%=tempName %>Name</span>
+				<span><%= activity.getTitle() %>Name</span>
 			</div>
 			<div id="DATE__TIME__Location_">
-				<div id="startInfo">Start: <%=tempStart %></div>
-				<div id="endInfo">End: <%=tempEnd %></div>
+				<div id="startInfo">Start: <%= activity.getStartDate() %> <%= activity.getStartTime() %></div>
+				<div id="endInfo">End: <%= activity.getEndDate() %> <%= activity.getEndTime() %></div>
 				<div id="locationInfo">Location:</div>
 				<div id="descriptionTitle">Description:</div>
-				<div id="descriptionInfo">test description<%=tempDescription %></div>
+				<div id="descriptionInfo"><%= activity.getDescription() %></div>
 			</div>
 			<div id="Initiator_">
 				<span style="">Initiator</span>

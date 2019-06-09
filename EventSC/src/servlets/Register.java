@@ -1,50 +1,106 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.concurrent.ThreadLocalRandom;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import utility.DBCredentials;
+import utility.DBConnection;
 
-/**
- * Servlet implementation class Register
- */
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	// Database Connection Username
-	@SuppressWarnings("unused")
-	private static final String dbusername = DBCredentials.getUsername();
-	// Database Connection Password
-	@SuppressWarnings("unused")
-	private static final String dbpassword = DBCredentials.getPassword();
-
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public Register() {
-		super();
-		// TODO Auto-generated constructor stub
+	
+	private static ArrayList<String> profileImagePaths = new ArrayList<String>() {
+		{
+			add("img/initiator.png");
+			add("img/interested1.png");
+			add("img/interested2.png");
+			add("img/interested3.png");
+		}
+	};
+	
+	public static int randomInt(int min, int max) {
+		// min and max are inclusive
+		return ThreadLocalRandom.current().nextInt(min, max + 1);
 	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	
+	public static int getUserIDByUsername(String username) {
+		int ans = -1;
+		
+		try {
+			DBConnection db = new DBConnection();
+			db.getConnection();
+			ResultSet rs = db.executeQuery("SELECT userID FROM Users WHERE email = \"" + username + "\";");
+			
+			if (rs.next()) { // username exists
+				ans = rs.getInt("userID");
+			}
+			
+		} catch (SQLException sqle) {
+			System.out.println("sqle: " + sqle.getMessage());
+		}
+		
+		return ans;
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	
+	private static String hashFunction(String str) {
+		int hash = 7;
+		for (int i = 0; i < str.length(); i++) {
+		    hash = hash*31 + str.charAt(i);
+		}
+		return ""+hash;
+	}
+	
+	private static void addUserDB(String username, String password) {
+		System.out.println("adding user");
+		DBConnection db = new DBConnection();
+		db.getConnection();
+		String randomImage = profileImagePaths.get(randomInt(0, profileImagePaths.size()-1));
+		db.executeUpdate("INSERT INTO Users (email, passHash, profilepic, gradyear) VALUES (\"" + username + "\", \"" + hashFunction(password) + "\", \"" + randomImage + "\", " + Calendar.getInstance().get(Calendar.YEAR) + ");");
+	}
+	
+	public static int registerUser(String username, String password, String passwordConf) {
+		// returns:
+		//		0 - successful registration
+		//		1 - passwords don't match
+		//		2 - username taken
+		
+		if (!password.equals(passwordConf)) return 1;
+		
+		int userID = getUserIDByUsername(username);
+		if (userID != -1) return 2;
+		
+		addUserDB(username, password);
+		
+		return 0;
+	}
+	
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String passwordConf = request.getParameter("passwordConf");
+		
+		int status = registerUser(username, password, passwordConf);
+		
+		PrintWriter pw = response.getWriter();
+		pw.println(status);
+		pw.close();
+		
+		int userID = getUserIDByUsername(username);
+		HttpSession session = request.getSession();
+		session.setAttribute("userID", null);
+		session.setAttribute("userID", userID);
 	}
 
 }

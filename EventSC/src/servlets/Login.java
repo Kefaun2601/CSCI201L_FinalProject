@@ -1,57 +1,99 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import utility.DBCredentials;
+import utility.DBConnection;
 
-/**
- * Servlet implementation class Login
- */
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	// Database Connection Username
-	@SuppressWarnings("unused")
-	private static final String dbusername = DBCredentials.getUsername();
-	// Database Connection Password
-	@SuppressWarnings("unused")
-	private static final String dbpassword = DBCredentials.getPassword();
-
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public Login() {
-		super();
-		// TODO Auto-generated constructor stub
+	
+	public static int getUserIDByUsername(String username) {
+		int ans = -1;
+		
+		try {
+			DBConnection db = new DBConnection();
+			db.getConnection();
+			ResultSet rs = db.executeQuery("SELECT userID FROM Users WHERE email = \"" + username + "\";");
+			
+			if (rs.next()) { // username exists
+				ans = rs.getInt("userID");
+			}
+			
+		} catch (SQLException sqle) {
+			System.out.println("sqle: " + sqle.getMessage());
+		}
+		
+		return ans;
 	}
+	
+	private static String hashFunction(String str) {
+		int hash = 7;
+		for (int i = 0; i < str.length(); i++) {
+		    hash = hash*31 + str.charAt(i);
+		}
+		return ""+hash;
+	}
+	
+	private static boolean checkPassword(int userID, String password) {
+		boolean ans = false;
+		
+		try {
+			DBConnection db = new DBConnection();
+			db.getConnection();
+			ResultSet rs = db.executeQuery("SELECT passHash FROM Users WHERE userID = " + userID + ";");
 
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
+			if (rs.next()) {
+				String passHash = rs.getString("passHash");
+				if (hashFunction(password).equals(passHash)) { // password matches
+					ans = true;
+				}
+			}
+			
+		} catch (SQLException sqle) {
+			System.out.println("sqle: " + sqle.getMessage());
+		}
+		
+		return ans;
+	}
+	
+	public static int loginUserPass(String username, String password) {
+		// returns:
+		//		0 - successful login
+		//		1 - valid username, bad password
+		//		2 - unrecognized username
+		
+		int userID = getUserIDByUsername(username);
+		
+		if (userID == -1) return 2;
+		if (!checkPassword(userID, password)) return 1;
+		return 0;
+	}
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		int status = loginUserPass(username, password);
+		
+		PrintWriter pw = response.getWriter();
+		pw.println(status);
+		pw.close();
+		
+		int userID = getUserIDByUsername(username);
+		HttpSession session = request.getSession();
+		session.setAttribute("userID", null);
+		session.setAttribute("userID", userID);
 	}
 
 }

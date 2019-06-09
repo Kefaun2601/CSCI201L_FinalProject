@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>EventSC</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="RegisterStyle.css"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>EventSC</title>
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="RegisterStyle.css"/>
+	<script>
+		function validateForm() {
+			// set error message div to empty here
+			
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "/Register?" +
+						"username=" + document.getElementsByName("email")[0].value +
+						"&password=" + document.getElementsByName("password")[0].value +
+						"&passwordConf=" + document.getElementsByName("passwordConf")[0].value
+						, false);
+			xhttp.send();
+			if (xhttp.responseText.trim() == "1") {
+				// set error message div to "The passwords do not match." here
+				return false;
+			}
+			else if (xhttp.responseText.trim() == "2") {
+				// set error message div to "The username is already taken." here
+				return false;
+			}
+			return true;
+		}
+	</script>
 </head>
 <body>
 <div id="Register">

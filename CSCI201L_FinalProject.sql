@@ -20,14 +20,14 @@ CREATE TABLE Activities (
     userID INT(11) NOT NULL,
     title VARCHAR(45),
     description VARCHAR(45),
-    lat FLOAT(8,4),
-    lon FLOAT(8,4),
-    startDate VARCHAR(8),
-    startTime VARCHAR(6),
-    endDate VARCHAR(8),
-    endTime VARCHAR(6),
+    lat FLOAT(10,6), -- xxxx.xxxxxx
+    lon FLOAT(10,6), -- xxxx.xxxxxx
+    startDate VARCHAR(8), -- MM/DD/YY
+    startTime VARCHAR(5), -- HH:MM
+    endDate VARCHAR(8), -- MM/DD/YY
+    endTime VARCHAR(6), -- HH:MM
     timeCreated TIMESTAMP,
-    picture VARCHAR(45),
+    picture VARCHAR(45), -- image path
     FOREIGN KEY(userID) REFERENCES Users(userID)
 );
 
@@ -36,7 +36,7 @@ CREATE TABLE Comments (
     userID INT(11) NOT NULL,
     activityID INT(11) NOT NULL,
     content VARCHAR(200),
-    timeCreated VARCHAR(14),
+    timeCreated TIMESTAMP,
     FOREIGN KEY(userID) REFERENCES Users(userID),
     FOREIGN KEY(activityID) REFERENCES Activities(activityID)
 );

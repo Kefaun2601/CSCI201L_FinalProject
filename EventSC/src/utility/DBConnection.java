@@ -5,7 +5,7 @@ import java.sql.*;
 public class DBConnection {
 	private Connection con = null;
 	private Statement st = null;
-	private ResultSet rs =null;
+	private ResultSet rs = null;
 	
 	private String url = "jdbc:mysql://localhost:3306/CSCI201L_FinalProject";	
 	private String user = "root";//username
@@ -19,8 +19,9 @@ public class DBConnection {
 	public void getConnection(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection(url, user, password);   
-			System.out.println(con);
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CSCI201L_FinalProject?user=" + user + "&password=" + password + "&useSSL=false");
+			//con = DriverManager.getConnection(url, user, password);   
+			//System.out.println(con);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
