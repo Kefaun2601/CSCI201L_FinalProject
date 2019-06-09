@@ -20,7 +20,7 @@
 
 		</svg>
 		<div id="USCCardinal">
-			<img id="UscLogo" src="USCCardinal_A2_Rectangle_25_pattern.png">
+			<img id="UscLogo" src="img/USC_logo.png">
 		</div>
 	</div>
 	<div id="EventSc">
@@ -42,7 +42,7 @@
 	<svg class="Rectangle_7">
 	</svg>
 	<div id="Group_13">
-		<img id="Backtomap" src="Group 13@2x.png">
+		<img id="Backtomap" src="img/BackToMap.png">
 
 	</div>
 	<form id="NewEvent" name="NewEvent" method="get" action="">

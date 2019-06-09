@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventSC/WebContent/newevent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EventSC/WebContent/newevent.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,16 +29,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newevent.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="newevent.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EventSC/WebContent/newevent.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="85" column="35" lean-forward="true" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+            <state relative-caret-position="135">
+              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewEventStyle.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewEventStyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
@@ -152,12 +149,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560053200897</updated>
-      <workItem from="1560053203458" duration="1564000" />
+      <workItem from="1560053203458" duration="2040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1564000" />
+    <option name="totallyTimeSpent" value="2040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="774" extended-state="0" />
@@ -258,13 +255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EventSC/WebContent/newevent.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="85" column="35" lean-forward="true" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/NewEventStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -276,6 +266,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="605" column="16" lean-forward="true" selection-start-line="605" selection-start-column="16" selection-end-line="605" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EventSC/WebContent/newevent.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
         </state>
       </provider>
     </entry>
