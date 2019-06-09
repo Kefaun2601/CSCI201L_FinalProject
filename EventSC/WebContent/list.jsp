@@ -11,7 +11,7 @@
 	<tbody>
 	<tr class="row">
 		<td class="icon">
-			<img src="img/event_icon.png">
+			<img src="img/event_icon1.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>
@@ -27,7 +27,7 @@
 
 	<tr class="row">
 		<td class="icon">
-			<img src="img/event_icon.png">
+			<img src="img/event_icon2.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>
@@ -43,7 +43,7 @@
 
 	<tr class="row">
 		<td class="icon">
-			<img src="img/event_icon.png">
+			<img src="img/event_icon3.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>
@@ -59,7 +59,7 @@
 
 	<tr class="row">
 		<td class="icon">
-			<img src="img/event_icon.png">
+			<img src="img/event_icon4.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>

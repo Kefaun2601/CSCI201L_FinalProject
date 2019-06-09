@@ -107,7 +107,7 @@
 		<div id="Group_30">
 
 			<div id="EventIcon">
-				<img id="EventPic" src="img/calendar.png">
+				<img id="EventPic" src="img/event_icon7.png">
 			</div>
 			<div id="Event_Name">
 				<span><%=tempName %>Name</span>
