@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS201FinalProjectUI/List_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/CS201FinalProjectUI/List_View.html" afterDir="false" />
-    </list>
+    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,18 +32,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Profile_Page.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Profile_Page.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#rect#0;n#svg#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="77">
+              <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileStyle.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="355" column="20" selection-start-line="355" selection-start-column="20" selection-end-line="355" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -150,12 +149,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560053200897</updated>
       <workItem from="1560053203458" duration="2040000" />
-      <workItem from="1560061328147" duration="793000" />
+      <workItem from="1560061328147" duration="1081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2833000" />
+    <option name="totallyTimeSpent" value="3121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="774" extended-state="0" />
@@ -244,13 +243,6 @@
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/RegisterStyle.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/New_Event_Page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -298,15 +290,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#rect#0;n#svg#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="77">
+          <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="355" column="20" selection-start-line="355" selection-start-column="20" selection-end-line="355" selection-end-column="20" />
         </state>
       </provider>
     </entry>

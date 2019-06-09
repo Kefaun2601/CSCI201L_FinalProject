@@ -1,6 +1,8 @@
-body {
+body, html {
 	margin: 0;
 	padding: 0;
+	height: 100%;
+	width: 100%;
 }
 :root {
 	--web-view-ids: List_View;
@@ -13,23 +15,23 @@ body {
 	position: absolute;
 	box-sizing: border-box;
 	background: #E5E5E5;
-	width: 1920px;
-	height: 1080px;
+	width: 100%;
+	height: 100%;
 	background-color: rgba(255,255,255,1);
-	overflow: scroll;
+	overflow: hidden;
 	margin: 0;
 	padding: 0;
 	opacity: 1;
 	--web-view-name: List View;
 	--web-view-id: List_View;
-	--web-scale-to-fit: true;
+	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 #Group_18 {
 	opacity: 1;
 	position: absolute;
-	width: 1920px;
-	height: 1688px;
+	width: 100%;
+	height: 88%;
 	left: 0px;
 	top: 125px;
 	overflow: visible;
@@ -47,577 +49,16 @@ body {
 .Rectangle_4 {
 	position: absolute;
 	overflow: visible;
-	width: 1920px;
-	height: 1688px;
+	width: 100%;
+	height: 88%;
 	left: 0px;
 	top: 0px;
-}
-#Repeat_Grid_1 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 1354px;
-	left: 404px;
-	top: 442px;
-	overflow: hidden;
-}
-#Group_17 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Rectangle_10 {
-	opacity: 1;
-	fill: rgba(244,244,244,1);
-	stroke: rgb(112, 112, 112);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_10 {
-	position: absolute;
-	overflow: visible;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_Bag_Present_379544 {
-	opacity: 1;
-	fill: url(#iconfinder_Bag_Present_379544_A2_Rectangle_4_pattern);
-}
-.iconfinder_Bag_Present_379544 {
-	position: absolute;
-	overflow: visible;
-	width: 155px;
-	height: 155px;
-	left: 37px;
-	top: 10px;
-}
-#Event_Name {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 10px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	color: rgba(100,95,95,1);
-}
-#Date__Time__Description_ {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 64px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
-#Group_17_A2_Group_3 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 194px;
-	overflow: visible;
-}
-#Rectangle_10_A2_Rectangle_5 {
-	opacity: 1;
-	fill: rgba(244,244,244,1);
-	stroke: rgb(112, 112, 112);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_10_A2_Rectangle_5 {
-	position: absolute;
-	overflow: visible;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_calendar_1287530 {
-	opacity: 1;
-	fill: url(#iconfinder_calendar_1287530_A2_Rectangle_7_pattern);
-}
-.iconfinder_calendar_1287530 {
-	position: absolute;
-	overflow: visible;
-	width: 155px;
-	height: 155px;
-	left: 37px;
-	top: 10px;
-}
-#Event_Name_A2_Text_3 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 10px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	color: rgba(100,95,95,1);
-}
-#Date__Time__Description__A2_Text_4 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 64px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
-#Group_17_A2_Group_4 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 388px;
-	overflow: visible;
-}
-#Rectangle_10_A2_Rectangle_8 {
-	opacity: 1;
-	fill: rgba(244,244,244,1);
-	stroke: rgb(112, 112, 112);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_10_A2_Rectangle_8 {
-	position: absolute;
-	overflow: visible;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_calendar_1287530_A2_Rectangle_9 {
-	opacity: 1;
-	fill: url(#iconfinder_calendar_1287530_A2_Rectangle_10_pattern);
-}
-.iconfinder_calendar_1287530_A2_Rectangle_9 {
-	position: absolute;
-	overflow: visible;
-	width: 155px;
-	height: 155px;
-	left: 37px;
-	top: 10px;
-}
-#Event_Name_A2_Text_5 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 10px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	color: rgba(100,95,95,1);
-}
-#Date__Time__Description__A2_Text_6 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 64px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
-#Group_17_A2_Group_5 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 582px;
-	overflow: visible;
-}
-#Rectangle_10_A2_Rectangle_11 {
-	opacity: 1;
-	fill: rgba(244,244,244,1);
-	stroke: rgb(112, 112, 112);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_10_A2_Rectangle_11 {
-	position: absolute;
-	overflow: visible;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_calendar_1287530_A2_Rectangle_12 {
-	opacity: 1;
-	fill: url(#iconfinder_calendar_1287530_A2_Rectangle_13_pattern);
-}
-.iconfinder_calendar_1287530_A2_Rectangle_12 {
-	position: absolute;
-	overflow: visible;
-	width: 155px;
-	height: 155px;
-	left: 37px;
-	top: 10px;
-}
-#Event_Name_A2_Text_7 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 10px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	color: rgba(100,95,95,1);
-}
-#Date__Time__Description__A2_Text_8 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 64px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
-#Group_17_A2_Group_6 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 776px;
-	overflow: visible;
-}
-#Rectangle_10_A2_Rectangle_14 {
-	opacity: 1;
-	fill: rgba(244,244,244,1);
-	stroke: rgb(112, 112, 112);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_10_A2_Rectangle_14 {
-	position: absolute;
-	overflow: visible;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_calendar_1287530_A2_Rectangle_15 {
-	opacity: 1;
-	fill: url(#iconfinder_calendar_1287530_A2_Rectangle_16_pattern);
-}
-.iconfinder_calendar_1287530_A2_Rectangle_15 {
-	position: absolute;
-	overflow: visible;
-	width: 155px;
-	height: 155px;
-	left: 37px;
-	top: 10px;
-}
-#Event_Name_A2_Text_9 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 10px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	color: rgba(100,95,95,1);
-}
-#Date__Time__Description__A2_Text_10 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 64px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
-#Group_17_A2_Group_7 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 970px;
-	overflow: visible;
-}
-#Rectangle_10_A2_Rectangle_17 {
-	opacity: 1;
-	fill: rgba(244,244,244,1);
-	stroke: rgb(112, 112, 112);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_10_A2_Rectangle_17 {
-	position: absolute;
-	overflow: visible;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_calendar_1287530_A2_Rectangle_18 {
-	opacity: 1;
-	fill: url(#iconfinder_calendar_1287530_A2_Rectangle_19_pattern);
-}
-.iconfinder_calendar_1287530_A2_Rectangle_18 {
-	position: absolute;
-	overflow: visible;
-	width: 155px;
-	height: 155px;
-	left: 37px;
-	top: 10px;
-}
-#Event_Name_A2_Text_11 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 10px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	color: rgba(100,95,95,1);
-}
-#Date__Time__Description__A2_Text_12 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 64px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
-#Group_17_A2_Group_8 {
-	opacity: 1;
-	position: absolute;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 1164px;
-	overflow: visible;
-}
-#Rectangle_10_A2_Rectangle_20 {
-	opacity: 1;
-	fill: rgba(244,244,244,1);
-	stroke: rgb(112, 112, 112);
-	stroke-width: 1px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_10_A2_Rectangle_20 {
-	position: absolute;
-	overflow: visible;
-	width: 1097px;
-	height: 174px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_calendar_1287530_A2_Rectangle_21 {
-	opacity: 1;
-	fill: url(#iconfinder_calendar_1287530_A2_Rectangle_22_pattern);
-}
-.iconfinder_calendar_1287530_A2_Rectangle_21 {
-	position: absolute;
-	overflow: visible;
-	width: 155px;
-	height: 155px;
-	left: 37px;
-	top: 10px;
-}
-#Event_Name_A2_Text_13 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 10px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	color: rgba(100,95,95,1);
-}
-#Date__Time__Description__A2_Text_14 {
-	opacity: 1;
-	position: absolute;
-	left: 244px;
-	top: 64px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 132px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
-#Group_3 {
-	opacity: 1;
-	position: absolute;
-	width: 0px;
-	height: 0px;
-	left: 1990px;
-	top: 0px;
-	overflow: visible;
-}
-#Group_2 {
-	opacity: 1;
-	position: absolute;
-	width: 0px;
-	height: 0px;
-	left: 1990px;
-	top: 0px;
-	overflow: visible;
-}
-#Group_1 {
-	opacity: 1;
-	position: absolute;
-	width: 0px;
-	height: 0px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
 }
 #Group_28 {
 	opacity: 1;
 	position: absolute;
-	width: 1920px;
-	height: 370px;
+	width: 100%;
+	height: 100%;
 	left: 0px;
 	top: 43px;
 	overflow: visible;
@@ -635,48 +76,42 @@ body {
 .Rectangle_1 {
 	position: absolute;
 	overflow: visible;
-	width: 1921px;
-	height: 371px;
+	width: 100%;
+	height: 34%;
 	left: 0px;
 	top: 0px;
+	background-color:rgba(157,21,54,1);
 }
 #USCCardinal {
 	opacity: 1;
 	position: absolute;
-	width: 582px;
-	height: 145px;
-	left: 266px;
-	top: 40px;
+	width: 25%;
+	left: 13%;
+	top: 3%;
 	overflow: visible;
 }
-#USCCardinal_A2_Rectangle_24 {
-	opacity: 1;
-	fill: url(#USCCardinal_A2_Rectangle_25_pattern);
+
+#UscLogo{
+	width: 100%;
+	height: 100%;
 }
-.USCCardinal_A2_Rectangle_24 {
-	position: absolute;
-	overflow: visible;
-	width: 582px;
-	height: 145px;
-	left: 0px;
-	top: 0px;
-}
+
 #EventSc {
 	opacity: 1;
 	position: absolute;
-	left: 1362px;
-	top: 94px;
+	left: 70%;
+	top: 8%;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	overflow: visible;
-	width: 273px;
+	width: 25%;
 	white-space: nowrap;
 	text-align: left;
 	font-family: Sukhumvit Set;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 78px;
+	font-size: 64px;
 	color: rgba(255,255,255,1);
 }
 #Rectangle_2 {
@@ -692,15 +127,16 @@ body {
 .Rectangle_2 {
 	position: absolute;
 	overflow: visible;
-	width: 1920px;
-	height: 60px;
+	width: 100%;
+	height: 7%;
 	left: 0px;
 	top: 0px;
+	background-color: #000000;
 }
 #Login {
 	opacity: 1;
 	position: absolute;
-	left: 1511px;
+	left: 78%;
 	top: 8px;
 	box-sizing: border-box;
 	margin: 0;
@@ -712,91 +148,25 @@ body {
 	font-family: AppleGothic;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 36px;
+	font-size: 28px;
 	color: rgba(248,240,240,1);
-}
-#Login a{
-	text-decoration: none;
-	color: rgba(248,240,240,1);
-}
-
-#Path_1 {
-	opacity: 1;
-	fill: url(#Path_1_A2_Path_2_pattern);
-	stroke: rgb(255, 255, 255);
-	stroke-width: 20px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Path_1 {
-	transform: matrix(1,0,0,1,0,0);
-	overflow: visible;
-	position: absolute;
-	top: 1025px;
-	left: 332px;
-	width: 1266px;
-	height: 0px;
 }
 #Group_7 {
 	opacity: 1;
 	position: absolute;
-	width: 230.005px;
-	height: 57px;
-	left: 1280.797px;
-	top: 245.824px;
+	width: 11%;
+	height: 5%;
+	left: 66%;
+	top: 25%;
 	overflow: visible;
-}
-#Group_7 button{
-	position: absolute;
-	z-index: 10;
-	width: 230.005px;
-	height: 57px;
-	cursor: pointer;
-	opacity: 0;
 }
 
-#Group_6 {
-	opacity: 1;
-	position: absolute;
-	width: 230.005px;
-	height: 57px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
+#NewEvent{
+	width: 100%;
+	z-index: 20;
+	display: block;
 }
-#Rectangle_5 {
-	opacity: 1;
-	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.553));
-	fill: rgba(250,250,240,1);
-	stroke: rgb(214, 214, 172);
-	stroke-width: 4px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_5 {
-	position: absolute;
-	overflow: visible;
-	width: 256.005px;
-	height: 82.191px;
-	left: 0px;
-	top: 0px;
-}
-#iconfinder_plus_circle_2561291 {
-	opacity: 1;
-	fill: url(#iconfinder_plus_circle_2561291_A2_Rectangle_29_pattern);
-}
-.iconfinder_plus_circle_2561291 {
-	position: absolute;
-	overflow: visible;
-	width: 48px;
-	height: 48px;
-	left: 13px;
-	top: 9px;
-}
+
 #New_Event {
 	opacity: 1;
 	position: absolute;
@@ -818,74 +188,22 @@ body {
 #Group_9 {
 	opacity: 1;
 	position: absolute;
-	width: 230.005px;
-	height: 56.191px;
-	left: 403.797px;
-	top: 245.824px;
+	width: 11%;
+	height: 5%;
+	left: 20%;
+	top: 25%;
 	overflow: visible;
 }
-#Group_9 button{
-	opacity: 0;
-	position: absolute;
-	z-index: 10;
-	width: 230.005px;
-	height: 56.191px;
-	cursor: pointer;
+#Filter{
+	width: 100%;
+	z-index: 30;
+	display: block;
 }
 
-#Rectangle_5_A2_Rectangle_30 {
-	opacity: 1;
-	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.553));
-	fill: rgba(250,250,240,1);
-	stroke: rgb(214, 214, 172);
-	stroke-width: 4px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
-}
-.Rectangle_5_A2_Rectangle_30 {
-	position: absolute;
-	overflow: visible;
-	width: 256.005px;
-	height: 82.191px;
-	left: 0px;
-	top: 0px;
-}
-#__Filter {
-	opacity: 1;
-	position: absolute;
-	left: 71.005px;
-	top: 13.191px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 85px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: AppleGothic;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 30px;
-	color: rgba(5,5,5,1);
-}
-#iconfinder_filter_3325128 {
-	opacity: 1;
-	fill: url(#iconfinder_filter_3325128_A2_Rectangle_32_pattern);
-}
-.iconfinder_filter_3325128 {
-	position: absolute;
-	overflow: visible;
-	width: 54px;
-	height: 54px;
-	left: 12.203px;
-	top: 2.176px;
-}
 #Register {
 	opacity: 1;
 	position: absolute;
-	left: 1681px;
+	left: 87%;
 	top: 8px;
 	box-sizing: border-box;
 	margin: 0;
@@ -897,78 +215,112 @@ body {
 	font-family: AppleGothic;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 36px;
+	font-size: 28px;
 	color: rgba(248,240,240,1);
 }
-#Register a{
-	text-decoration: none;
-	color: rgba(248,240,240,1);
-}
-
 #Group_12 {
 	opacity: 1;
 	position: absolute;
-	width: 230.005px;
-	height: 56.191px;
-	left: 680.797px;
-	top: 245.824px;
+	width: 11%;
+	height: 5%;
+	left: 35%;
+	top: 25%;
 	overflow: visible;
-}
-#Group_12 button{
-	opacity: 0;
-	position: absolute;
-	z-index: 10;
-	width: 230.005px;
-	height: 56.191px;
-	cursor: pointer;
 }
 
-#Rectangle_5_A2_Rectangle_33 {
-	opacity: 1;
-	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.553));
-	fill: rgba(250,250,240,1);
-	stroke: rgb(214, 214, 172);
-	stroke-width: 4px;
-	stroke-linejoin: miter;
-	stroke-linecap: butt;
-	stroke-miterlimit: 4;
-	shape-rendering: auto;
+#Map{
+	width: 100%;
+	z-index: 30;
+	display: block;
 }
-.Rectangle_5_A2_Rectangle_33 {
+
+
+#list {
 	position: absolute;
-	overflow: visible;
-	width: 256.005px;
-	height: 82.191px;
-	left: 0px;
-	top: 0px;
+	left: 20%;
+	top: 39%;	
+	z-index: 2;
+	width: 800px;
 }
-#Map_view {
-	opacity: 1;
-	position: absolute;
-	left: 83.005px;
-	top: 12.191px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: visible;
-	width: 134px;
-	white-space: nowrap;
+
+.row{
+	height: 60px;
+	width: 800px;
+}
+
+td{
+	height: 174px;
+}
+
+td img{
+	float: left;
+	padding-top: 5px;
+	padding-left: 20px;
+	height: 90px;
+}
+
+.icon{
+	background-color: rgba(244,244,244,1);
+	border: 1px solid;
+	border-radius: 20px;
+	border-color: rgb(112, 112, 112);
+	border-width: thin;
+	height: 120px;
+	margin-left: 5%;
+	border-bottom: 1px solid rgb(112, 112, 112);
+	border-top: 1px solid rgb(112, 112, 112);
+	border-radius: 20px;
+	width: 800px;
+}
+
+.EventName {
+	position: relative;
 	text-align: left;
 	font-family: AppleGothic;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 30px;
-	color: rgba(5,5,5,1);
+	font-size: 24px;
+	color: rgba(100,95,95,1);
+	top: 5px;
+	padding-left: 30px;
+	
+	
 }
-#iconfinder_map_2561464 {
-	opacity: 1;
-	fill: url(#iconfinder_map_2561464_A2_Rectangle_35_pattern);
+
+.info{
+	position: relative;
+	text-align: left;
+	font-family: AppleGothic;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgba(100,95,95,1);
+	top: 5px;
+	padding-left: 30px;
 }
-.iconfinder_map_2561464 {
-	position: absolute;
-	overflow: visible;
-	width: 41px;
-	height: 41px;
-	left: 15.203px;
-	top: 8.176px;
+
+
+
+tbody {
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 400px;
+	width: 800px;
+}
+
+.Rectangle_7 {
+	z-index: 1;
+    position: absolute;
+    overflow: visible;
+    width: 65%;
+    height: 110%;
+    left: 17%;
+    top: 35%;
+    background-color: rgba(244,244,244,1);
+    border-radius: 20px;
+}
+
+a {
+	text-decoration: none;
 }

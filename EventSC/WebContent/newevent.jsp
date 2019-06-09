@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>NewEventPage</title>
+<title>EventSC</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="NewEventStyle.css"/>
 
 </head>
@@ -20,7 +20,7 @@
 
 		</svg>
 		<div id="USCCardinal">
-			<img id="UscLogo" src="img/USC_logo.png">
+			<a href="index.jsp"><img id="UscLogo" src="img/USC_logo.png"></a>
 		</div>
 	</div>
 	<div id="EventSc">
@@ -29,7 +29,7 @@
 	<svg class="Rectangle_2">
 	</svg>
 	<div id="Login">
-		<span>Login</span>
+		<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
 	</div>
 	<svg class="Rectangle_2">
 
@@ -37,15 +37,14 @@
 
 
 	<div id="Register">
-		<span>Register</span>
+		<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
 	</div>
 	<svg class="Rectangle_7">
 	</svg>
 	<div id="Group_13">
-		<img id="Backtomap" src="img/BackToMap.png">
-
+		<a href="index.jsp"><img id="Backtomap" src="img/BackToMap.png" style="cursor: pointer;"></a>
 	</div>
-	<form id="NewEvent" name="NewEvent" method="get" action="">
+	<form id="NewEvent" name="NewEvent" method="get" action="index.jsp" onsubmit="return validateForm()">
 		<div id="Group_19">
 			<div id="Event_Name_A7_Text_7">
 				<span>Event Name</span><br>
@@ -54,56 +53,58 @@
 		</div>
 		<div id="Group_20">
 			<div id="Date">
-				<span>Date</span>
+				<span>Start Date</span>
 			</div>
-			<input id="date" type="date" name="Date" width="313.5">
+			<input id="date_start" type="date" name="Date_Start" width="313.5">
 		</div>
 		<div id="Group_21">
 			<div id="Time">
-				<span>Time</span>
+				<span>Start Time</span>
 			</div>
-			<input id="time" type="time" name="Time" width="313.5">
+			<input id="time_start" type="time" name="Time_Start" width="313.5">
+		</div>
+		<div id="Group_20_2">
+			<div id="Date_2">
+				<span>End Date</span>
+			</div>
+			<input id="date_end" type="date" name="Date_End" width="313.5">
+		</div>
+		<div id="Group_21_2">
+			<div id="Time_2">
+				<span>End Time</span>
+			</div>
+			<input id="time_end" type="time" name="Time_End" width="313.5">
 		</div>
 		<div id="Group_22">
 			<div id="Location">
-				<span>Location</span>
+				<span>Latitude</span>
 			</div>
-			<input id="location" type="text" name="Location">
+			<input id="lat" type="text" name="Lat">
+			<div id="Location_2">
+				<span>Longitude</span>
+			</div>
+			<input id="lon" type="text" name="Lon">
 		</div>
 
 		<div id="mapicon">
-			<img id="mapIcon" src="iconfinder_map_285662_A7_Rectangle_14_pattern.png" width="40" height="40">
-		</div>
-
-		<div id="Group_23">
-			<div id="One_line_Description__100_char">
-				<span>One-line Description (100 characters)</span>
-			</div>
-			<input id="ShortDescription" type="text" name="SDescription" width="627">
-		</div>
-		<div id="Group_24">
-			<div id="Images">
-				<span>Images</span>
-			</div>
-			<svg class="Rectangle_11_A7_Rectangle_16">
-				<rect id="Rectangle_11_A7_Rectangle_16" rx="0" ry="0" x="0" y="0" width="313.5" height="40">
-				</rect>
-			</svg>
-
+			<img id="mapIcon" src="img/map_icon.png">
 		</div>
 		<div id="Group_25">
 			<div id="Detailed_Description">
-				<span>Detailed Description</span>
+				<span>Description</span>
 			</div>
 
-			<textarea id ="Description" name="Description" rows="8" cols="100"></textarea>
+			<textarea id ="Description" name="Description" rows="4" cols="100"></textarea>
 		</div>
 
-		<div id="Submit">
-			<img id="submit" src="Group 34.png" width="180" height="42">
-		</div>
+		<img id="submitButton" src="img/submit_button.png" width="180" height="42">
 	</form>
 
+<script type="text/javascript">
+	document.getElementById("submitButton").onclick = function() {
+		document.getElementById("NewEvent").submit();
+	};
+</script>
 
 </div>
 </body>

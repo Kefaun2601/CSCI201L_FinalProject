@@ -6,13 +6,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta charset="utf-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta charset="UTF-8"/>
 	<title>EventSC</title>
 	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="MapStyle.css"/>
 	<style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 100%;
+		display: block;
+		position: absolute;
+		overflow: visible;
+		width: 65%;
+		height: 63%;
+		left: 17%;
+		top: 33%;
+		margin-bottom: 5%;
+      }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
@@ -37,7 +48,8 @@
        	var marker, i;
     	  
      	
-    <%ArrayList<Activity> temp = Helper.getAllActivities();
+    <%
+    	ArrayList<Activity> temp = Helper.getAllActivities();
     	int count=temp.size();
     	for (int i = 0; i < count; i++) {  
 			String tempName=temp.get(i).getTitle();
