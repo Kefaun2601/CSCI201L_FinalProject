@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="" />
+    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventSC/WebContent/newevent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EventSC/WebContent/newevent.jsp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,32 +14,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Profile_Page.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html">
+      <file leaf-file-name="New_Event_Page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/New_Event_Page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="90" column="50" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#rect#0;n#svg#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileStyle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
+      <file leaf-file-name="NewEventStyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/NewEventStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newevent.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EventSC/WebContent/newevent.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="85" column="35" lean-forward="true" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewEventStyle.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="605" column="16" lean-forward="true" selection-start-line="605" selection-start-column="16" selection-end-line="605" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +69,8 @@
         <option value="$PROJECT_DIR$/CS201FinalProjectUI/Login.html" />
         <option value="$PROJECT_DIR$/CS201FinalProjectUI/Register.html" />
         <option value="$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html" />
+        <option value="$PROJECT_DIR$/EventSC/WebContent/newevent.jsp" />
+        <option value="$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css" />
       </list>
     </option>
   </component>
@@ -85,7 +108,13 @@
             <path>
               <item name="CSCI201L_FinalProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="CSCI201L_FinalProject" type="462c0819:PsiDirectoryNode" />
-              <item name="CS201FinalProjectUI" type="462c0819:PsiDirectoryNode" />
+              <item name="EventSC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CSCI201L_FinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSCI201L_FinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="EventSC" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -123,12 +152,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560053200897</updated>
-      <workItem from="1560053203458" duration="1174000" />
+      <workItem from="1560053203458" duration="1564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1174000" />
+    <option name="totallyTimeSpent" value="1564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="774" extended-state="0" />
@@ -159,17 +188,13 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.jsp" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/Login.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -201,8 +226,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="90" column="50" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
+        <state relative-caret-position="189">
+          <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#span#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -210,6 +235,47 @@
             <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#rect#0;n#svg#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/List_View.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ListViewStyle.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/New_Event_Page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EventSC/WebContent/newevent.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="85" column="35" lean-forward="true" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/NewEventStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="605" column="16" lean-forward="true" selection-start-line="605" selection-start-column="16" selection-end-line="605" selection-end-column="16" />
         </state>
       </provider>
     </entry>
