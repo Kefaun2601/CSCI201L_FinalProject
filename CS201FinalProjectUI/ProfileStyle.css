@@ -505,3 +505,11 @@ body {
 	left: 62px;
 	top: 522px;
 }
+
+a {
+	text-decoration: none;
+}
+
+#profileSaveChanges {
+	float: right;
+}
