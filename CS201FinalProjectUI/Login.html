@@ -74,23 +74,14 @@
 					<input type="password" class="loginInput" name="password" />
 				</div>
 				
-				<svg class="Rectangle_15">
-					<rect id="Rectangle_15" rx="26.5" ry="26.5" x="0" y="0" width="266" height="53">
-					</rect>
-				</svg>
-				<div id="Login_A5_Text_7">
-					<span>Login</span>
-				</div>
+				<img src="Group%2037.png" id="loginButton" style="position: absolute; z-index: 1; bottom: 15%; left: 32%; cursor: pointer;" />
 			</form>
 		</div>
 	</div>
 </div>
 
 <script>
-document.getElementById("Rectangle_15").onclick = function(event) {
-	document.getElementById("loginForm").submit();
-};
-document.getElementById("Login_A5_Text_7").onclick = function(event) {
+document.getElementById("loginButton").onclick = function(event) {
 	document.getElementById("loginForm").submit();
 };
 </script>

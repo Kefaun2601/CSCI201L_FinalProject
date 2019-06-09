@@ -72,13 +72,7 @@
 					<br/>
 					<input type="password" class="registerInput" name="password" />
 				</div>
-				<svg class="Rectangle_15">
-					<rect id="Rectangle_15" rx="26.5" ry="26.5" x="0" y="0" width="266" height="53">
-					</rect>
-				</svg>
-				<div id="Register_A6_Text_7">
-					<span>Register</span>
-				</div>
+				<img src="Group%2038.png" id="registerButton" style="position: absolute; z-index: 1; bottom: 10%; left: 32%; cursor: pointer;" />
 				<div id="Confirm_Password">
 					<span>Confirm Password</span>
 					<br/>
@@ -90,10 +84,7 @@
 </div>
 
 <script>
-document.getElementById("Rectangle_15").onclick = function(event) {
-	document.getElementById("loginForm").submit();
-};
-document.getElementById("Register_A6_Text_7").onclick = function(event) {
+document.getElementById("registerButton").onclick = function(event) {
 	document.getElementById("loginForm").submit();
 };
 </script>
