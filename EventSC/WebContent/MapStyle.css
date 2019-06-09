@@ -29,6 +29,19 @@ body, html {
 	--web-enable-deep-linking: true;
 }
 
+#map {
+    height: 100%;
+    width: 100%;
+	display: block;
+	position: absolute;
+	overflow: visible;
+	width: 65%;
+	height: 63%;
+	left: 17%;
+	top: 33%;
+	margin-bottom: 5%;
+}
+
 #Rectangle_3 {
 	opacity: 1;
 	fill: url(#Rectangle_3_A0_Rectangle_7_pattern);

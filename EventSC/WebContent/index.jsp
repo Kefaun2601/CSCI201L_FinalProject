@@ -13,9 +13,6 @@
 	<style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 100%;
-      }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
@@ -33,7 +30,7 @@
     function initMap() {
     	  
     	  var map = new google.maps.Map(document.getElementById('map'), {
-    	      zoom:16,
+    	      zoom:15.5,
     	      center: new google.maps.LatLng(34.02235998929801, -118.28511714935303)
     	    });
 
@@ -86,7 +83,6 @@
     </script>
 	</head>
 <body>
-<div id="map"></div>
 <div id="Map">
 	<!-- header and background -->	
 	<div id="Group_18">
@@ -128,15 +124,13 @@
 		<img id="ListView" src="list_view.png">
 	</div>
 	<!-- header and background end -->
-	<div class="Rectangle_3">
 		<div id="GoogleMap">
-		<div id="map"></div>
+			<div id="map"></div>
 		</div>
 		
-	</div>
 	
 </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB_WPm3Y2eL3aSvs64KYGkDoQ_F4RYatE&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB_WPm3Y2eL3aSvs64KYGkDoQ_F4RYatE&language=en&callback=initMap"
     async defer></script>
 </body>
 </html>
