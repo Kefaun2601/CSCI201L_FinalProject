@@ -1,5 +1,9 @@
 package utility;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class User {
 	private int userID;
 	private String email;
@@ -10,6 +14,8 @@ public class User {
 	private int gradyear;
 	private String major;
 	
+	private DBConnection db;
+	
 	public User(int userId, String email, String fname, String lname, String phone, String profilepic, int gradyear, String major){
 		this.userID = userId;
 		this.email = email;
@@ -19,23 +25,20 @@ public class User {
 		this.profilepic = profilepic;
 		this.gradyear = gradyear;
 		this.major = major;
+		
+		this.db = new DBConnection();
+		db.getConnection();
 	}
-	
-	//For all the setters, need database connection!!!
-	//For all the setters, need database connection!!!
-	//For all the setters, need database connection!!!
 	
 	public int getUserID() {
 		return userID;
-	}
-	public void setUserID(int userID) {
-		this.userID = userID;
 	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
+		db.executeUpdate("UPDATE User SET email = \"" + email + "\" WHERE userID = " + this.userID + ";");
 	}
 	public String getFname() {
 		return fname;
