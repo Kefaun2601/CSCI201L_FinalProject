@@ -186,7 +186,7 @@ body {
 	width: 65%;
 	height: 70%;
 	left: 17%;
-    top: 33%;
+	top: 33%;
 	overflow: visible;
 }
 #Group_14 {
@@ -275,6 +275,7 @@ body {
 	font-size: 28px;
 	color: rgba(100,95,95,1);
 }
+
 #Lorem_ipsum_dolor_sit_amet__co {
 	opacity: 1;
 	position: absolute;
@@ -422,30 +423,43 @@ body {
 	top: 23%;
 }
 #overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.8);
-  z-index: 2;
-  cursor: pointer;
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 2;
+	cursor: pointer;
 }
 #google{
 	position: absolute;
-	top:400px;
-	left:630px;
-	height:50px;
-	width:50px;
-	border-radius:8px;
+	top: 61%;
+	left: 43%;
+	height: 40px;
+	width: 40px;
+	border-radius: 8px;
+	cursor: pointer;
 }
 #map {
-    	postion: relative;
-    	left:12.5%;
-    	top:25%;
-    	width: 75%;
-      	height: 75%;
-    }
+	postion: relative;
+	left: 12.5%;
+	top: 12.5%;
+	width: 75%;
+	height: 75%;
+}
+
+a {
+	text-decoration: none;
+}
+
+#startInfo, #endInfo, #locationInfo, #descriptionTitle, #descriptionInfo {
+	padding-top: 10%;
+}
+
+#startInfo, #endInfo, #locationInfo, #descriptionTitle {
+	font-weight: bold;
+}

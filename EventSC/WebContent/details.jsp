@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="DetailStyle.css"/>
 	<%  //String parameter=request.getParameter("activityID");
 		//int activityID=Integer.parseInt(parameter);
-		ArrayList<Activity> temp = Helper.getAllActivities();
+		ArrayList<Activity> temp = Helper.getAllActivities(); // CHANGE TO getActivityById();
 		String tempName="";
 		String tempDescription="";
 		float templat=0;
@@ -79,7 +79,7 @@
 			
 		</svg>
 		<div id="USCCardinal">
-			<img id="UscLogo" src="USCCardinal_A2_Rectangle_25_pattern.png">
+			<a href="index.jsp"><img id="UscLogo" src="img/USC_logo.png"></a>
 		</div>
 	</div>
 	<div id="EventSc">
@@ -88,7 +88,7 @@
 	<svg class="Rectangle_2">
 	</svg>
 	<div id="Login">
-		<span>Login</span>
+		<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
 	</div>
 	<svg class="Rectangle_2">
 		
@@ -96,28 +96,28 @@
 	
 	
 	<div id="Register">
-		<span>Register</span>
+		<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
 	</div>
 
 	<div id="Group_13">
-		<img id="Backtomap" src="Group 13@2x.png">
-		
+		<a href="index.jsp"><img id="Backtomap" src="img/BackToMap.png"></a>
 	</div>
 	<div id="Group_16">
 		
 		<div id="Group_30">
 
 			<div id="EventIcon">
-				<img id="EventPic" src="iconfinder_calendar_1287530_A2_Rectangle_7_pattern.png">
+				<img id="EventPic" src="img/calendar.png">
 			</div>
 			<div id="Event_Name">
-				<span><%=tempName %></span>
+				<span><%=tempName %>Name</span>
 			</div>
 			<div id="DATE__TIME__Location_">
-				<span>START: <%=tempStart %><br/>END:<%=tempEnd %><br/>Location:</span>
-			</div>
-			<div id="Lorem_ipsum_dolor_sit_amet__co">
-				<span><%=tempDescription %></span>
+				<div id="startInfo">Start: <%=tempStart %></div>
+				<div id="endInfo">End: <%=tempEnd %></div>
+				<div id="locationInfo">Location:</div>
+				<div id="descriptionTitle">Description:</div>
+				<div id="descriptionInfo">test description<%=tempDescription %></div>
 			</div>
 			<div id="Initiator_">
 				<span style="">Initiator</span>
@@ -126,23 +126,23 @@
 				<span>Interested</span>
 			</div>
 			<div id="initiatorPic">
-				<img id="initiatorProfile" src="iconfinder_JD-04_2625523.png" width="100%" height="100%">
+				<a href="profile.jsp"><img id="initiatorProfile" src="img/initiator.png" width="100%" height="100%"></a>
 			</div>
 			<div id="User1Pic">
-				<img id="User1Profile" src="iconfinder_JD_06_2625478_A3_Rectangle_15_pattern.png" width="100%" height="100%">
+				<a href="profile.jsp"><img id="User1Profile" src="img/interested1.png" width="100%" height="100%"></a>
 			</div>
 			<div id="User2Pic">
-				<img id="User2Profile" src="iconfinder_JD_08_2625520_A3_Rectangle_17_pattern.png" width="100%" height="100%">
+				<a href="profile.jsp"><img id="User2Profile" src="img/interested2.png" width="100%" height="100%"></a>
 			</div>
 			<div id="User3Pic">
-				<img id="User3profile" src="iconfinder_JD-09_2625479.png" width="100%" height="100%">
+				<a href="profile.jsp"><img id="User3profile" src="img/interested3.png" width="100%" height="100%"></a>
 			</div>
 			
 		</div>
 	</div>
 	<div id="map_button"><img src='img/map_icon.png' alt='GoogleIcon.png' id='google' onclick='on()'></div>
 </div>
-<div id="overlay">
+<div id="overlay" onclick="off()">
 			<div id="map"></div>
 		</div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB_WPm3Y2eL3aSvs64KYGkDoQ_F4RYatE&language=en&callback=initMap"

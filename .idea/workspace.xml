@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="" />
+    <list default="true" id="4fb2f3e4-ba51-4ea1-9767-68bed217df7a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/List_View.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -27,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ListViewStyle.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -36,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="77">
-              <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -44,8 +46,8 @@
       <file leaf-file-name="ProfileStyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="355" column="20" selection-start-line="355" selection-start-column="20" selection-end-line="355" selection-end-column="20" />
+            <state relative-caret-position="206">
+              <caret line="352" column="1" lean-forward="true" selection-start-line="352" selection-start-column="1" selection-end-line="352" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -65,13 +67,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css" />
         <option value="$PROJECT_DIR$/CS201FinalProjectUI/Login.html" />
         <option value="$PROJECT_DIR$/CS201FinalProjectUI/Register.html" />
         <option value="$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html" />
         <option value="$PROJECT_DIR$/EventSC/WebContent/newevent.jsp" />
         <option value="$PROJECT_DIR$/EventSC/WebContent/NewEventStyle.css" />
         <option value="$PROJECT_DIR$/CS201FinalProjectUI/List_View.html" />
+        <option value="$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css" />
       </list>
     </option>
   </component>
@@ -149,12 +151,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560053200897</updated>
       <workItem from="1560053203458" duration="2040000" />
-      <workItem from="1560061328147" duration="1081000" />
+      <workItem from="1560061328147" duration="1718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3121000" />
+    <option name="totallyTimeSpent" value="3758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="774" extended-state="0" />
@@ -274,7 +276,7 @@
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/List_View.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -284,21 +286,21 @@
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ListViewStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/Profile_Page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
-          <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CS201FinalProjectUI/ProfileStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="355" column="20" selection-start-line="355" selection-start-column="20" selection-end-line="355" selection-end-column="20" />
+        <state relative-caret-position="206">
+          <caret line="352" column="1" lean-forward="true" selection-start-line="352" selection-start-column="1" selection-end-line="352" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -5,7 +5,36 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <title>EventSC</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="NewEventStyle.css"/>
+<script>
+			
+			function on() {
+				  document.getElementById("overlay").style.display = "block";
+				}
 
+			function off() {
+				  document.getElementById("overlay").style.display = "none";
+			}
+			var map;
+		      function initMap() {
+		    	  var latitude = 34.02235998929801; 
+		          var longitude = -118.28511714935303; 
+		          
+		    	var myLatlng = {lat: latitude, lng: longitude};
+		    	
+		        map = new google.maps.Map(document.getElementById('map'), {
+		          center: myLatlng,
+		          zoom: 16
+		        });
+		
+		        google.maps.event.addListener(map,'click', function(event) {
+		        	var latitude = Math.round(event.latLng.lat() * 1000000) / 1000000;
+		             var longitude = Math.round(event.latLng.lng() * 1000000) / 1000000;
+		        	document.getElementById('lat').value = latitude;
+		            document.getElementById('lon').value = longitude;
+		            off();
+		            });
+		      }
+		</script>
 </head>
 <body>
 <div id="New_Event_Page">
@@ -87,7 +116,7 @@
 		</div>
 
 		<div id="mapicon">
-			<img id="mapIcon" src="img/map_icon.png">
+			<img id="mapIcon" src="img/map_icon.png" onclick='on()'>
 		</div>
 		<div id="Group_25">
 			<div id="Detailed_Description">
@@ -99,7 +128,6 @@
 
 		<img id="submitButton" src="img/submit_button.png" width="180" height="42">
 	</form>
-
 <script type="text/javascript">
 	document.getElementById("submitButton").onclick = function() {
 		document.getElementById("NewEvent").submit();
@@ -107,5 +135,11 @@
 </script>
 
 </div>
+
+		<div id="overlay">
+			<div id="map"></div>
+		</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB_WPm3Y2eL3aSvs64KYGkDoQ_F4RYatE&language=en&callback=initMap"
+    async defer></script>
 </body>
 </html>
