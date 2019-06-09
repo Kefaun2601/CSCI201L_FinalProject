@@ -109,31 +109,28 @@
 			
 		</svg>
 		<div id="USCCardinal">
-			<img id="UscLogo" src="USCCardinal.png">
+			<a href="index.jsp"><img id="UscLogo" src="img/USC_logo.png"></a>
 		</div>
 	</div>
 	<div id="EventSc">
-		<span style="">Event</span><span style="color:rgba(246,190,52,1);">SC</span>
+		<a href="index.jsp"><span style="color:white;">Event</span><span style="color:rgba(246,190,52,1);">SC</span></a>
 	</div>
 	<svg class="Rectangle_2">
 	</svg>
 	<div id="Login">
-		<span>Login</span>
+		<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
 	</div>
 	
 	<div id="Group_7">
-		<img id="NewEvent" src="new_event.png">
-		
+		<a href="newevent.jsp"><img id="NewEvent" src="img/new_event_button.png"></a>
 	</div>
-	<div id="Group_9">
-		<img id="Filter" src="filter.png">
-		
-	</div>
+	
 	<div id="Register">
-		<span>Register</span>
+		<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
 	</div>
-	<div id="Group_12">
-		<img id="ListView" src="list_view.png">
+	
+	<div id="Group_9">
+		<a href="list.jsp"><img id="ListView" src="img/list_view_button.png"></a>
 	</div>
 	<!-- header and background end -->
 		<div id="GoogleMap">

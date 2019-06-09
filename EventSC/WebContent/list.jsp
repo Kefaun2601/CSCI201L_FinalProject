@@ -11,7 +11,7 @@
 	<tbody>
 	<tr class="row">
 		<td class="icon">
-			<img src="iconfinder_Bag_Present_379544_A2_Rectangle_4_pattern.png">
+			<img src="img/event_icon.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>
@@ -27,7 +27,7 @@
 
 	<tr class="row">
 		<td class="icon">
-			<img src="iconfinder_Bag_Present_379544_A2_Rectangle_4_pattern.png">
+			<img src="img/event_icon.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>
@@ -43,7 +43,7 @@
 
 	<tr class="row">
 		<td class="icon">
-			<img src="iconfinder_Bag_Present_379544_A2_Rectangle_4_pattern.png">
+			<img src="img/event_icon.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>
@@ -59,7 +59,7 @@
 
 	<tr class="row">
 		<td class="icon">
-			<img src="iconfinder_Bag_Present_379544_A2_Rectangle_4_pattern.png">
+			<img src="img/event_icon.png">
 			<span class="EventName">Event Name</span> <br>
 			<span Class="info">
 								Date:<br/>
@@ -97,7 +97,7 @@
 		</div>
 	</div>
 	<div id="EventSc">
-		<span style="">Event</span><span style="color:rgba(246,190,52,1);">SC</span>
+		<a href="index.jsp"><span style="color:white;">Event</span><span style="color:rgba(246,190,52,1);">SC</span></a>
 	</div>
 	<svg class="Rectangle_2">
 	</svg>
@@ -109,14 +109,13 @@
 		<a href="newevent.jsp"><img id="NewEvent" src="img/new_event_button.png"></a>
 	</div>
 	<div id="Group_9">
-		<img id="Filter" src="img/filter_button.png">
-
+		<a href="index.jsp"><img id="Map" src="img/map_view_button.png"></a>
 	</div>
 	<div id="Register">
 		<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
 	</div>
 	<div id="Group_12">
-		<a href="index.jsp"><img id="Map" src="img/map_view_button.png"></a>
+		<img id="Filter" src="img/sort_button.png">
 	</div>
 </div>
 </body>

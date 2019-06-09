@@ -83,7 +83,7 @@
 		</div>
 	</div>
 	<div id="EventSc">
-		<span style="">Event</span><span style="color:rgba(246,190,52,1);">SC</span>
+		<a href="index.jsp"><span style="color:white;">Event</span><span style="color:rgba(246,190,52,1);">SC</span></a>
 	</div>
 	<svg class="Rectangle_2">
 	</svg>

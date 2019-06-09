@@ -170,7 +170,7 @@ body {
 	width: 14%;
 	height: 5%;
 	left: 62%;
-	top: 21%;
+	top: 23%;
 	overflow: visible;
 }
 
@@ -256,11 +256,11 @@ body {
 	font-size: 48px;
 	color: rgba(100,95,95,1);
 }
-#Gender__Major__Date_of_birth_ {
+#profileInfo {
 	opacity: 1;
 	position: absolute;
 	left: 25%;
-	top: 18%;
+	top: 5%;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -355,9 +355,10 @@ a {
 #profileSaveChanges {
 	position: absolute;
 	left: 25%;
-	top: 75%;
+	top: 80%;
 	width: 20%;
 	height: 10%;
+	cursor: pointer;
 }
 #user {
 	position: absolute;
@@ -376,4 +377,31 @@ a {
 
 a {
 	text-decoration: none;
+}
+
+#firstInfo, #lastInfo, #emailInfo, #phoneInfo, #majorInfo, #gradyearInfo {
+	margin-top: 5%;
+}
+
+.formInput {
+	border: 0.5px solid #707070;
+	color: rgba(100,95,95,1);
+	font-size: 20px;
+	line-height: 28px;
+}
+
+#formEmail {
+	width: 180%;
+}
+
+#formPhone {
+	width: 80%;
+}
+
+#formMajor {
+	width: 178%;
+}
+
+#formGradYear {
+	width: 35%;
 }

@@ -619,11 +619,13 @@ body, html {
 #date_start, #date_end {
     margin-top: 13%;
     line-height: 30px;
+    font-size: 18px;
 }
 
 #time_start, #time_end {
     margin-top: 13%;
     line-height: 30px;
+    font-size: 18px;
     width: 50%;
 }
 

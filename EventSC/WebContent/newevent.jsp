@@ -53,7 +53,7 @@
 		</div>
 	</div>
 	<div id="EventSc">
-		<span style="">Event</span><span style="color:rgba(246,190,52,1);">SC</span>
+		<a href="index.jsp"><span style="color:white;">Event</span><span style="color:rgba(246,190,52,1);">SC</span></a>
 	</div>
 	<svg class="Rectangle_2">
 	</svg>
@@ -136,7 +136,7 @@
 
 </div>
 
-		<div id="overlay">
+		<div id="overlay" onclick="off()">
 			<div id="map"></div>
 		</div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB_WPm3Y2eL3aSvs64KYGkDoQ_F4RYatE&language=en&callback=initMap"
