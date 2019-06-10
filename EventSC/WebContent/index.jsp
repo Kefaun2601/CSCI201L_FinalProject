@@ -50,36 +50,34 @@
     	    });
 
        	var marker, i;
-    	  
-     	
+       	var infowindow = new google.maps.InfoWindow({
+    		  maxWidth: 400
+	     	});
     <%
     	HashMap<Integer, Coordinate> locations = Helper.getLocations();
     	
     	Iterator<Map.Entry<Integer, Coordinate>> it = locations.entrySet().iterator();
     	while (it.hasNext()) {  
     		Map.Entry<Integer, Coordinate> entry = (Map.Entry<Integer, Coordinate>)it.next();
-			Activity activity = Helper.getActivityByID(entry.getKey());%>
-    		
-    		var marker, k;
+			Activity activity = Helper.getActivityByID(entry.getKey());
+			String tempName=activity.getTitle();
+			int i=0;%>
+			
    	    	marker = new google.maps.Marker({
-   		        position: new google.maps.LatLng(<%= activity.getLat() %>, <%= activity.getLon() %>),
+   	    	    position: new google.maps.LatLng(<%= activity.getLat() %>, <%= activity.getLon() %>),
    		        map: map,
-   		        url: 'details.jsp?activityID=' + <%= activity.getActivityID() %>
+   		        url: 'details.jsp?activityID=' + '<%= activity.getActivityID() %>'
    		      });
-
-   	     	var infowindow = new google.maps.InfoWindow({
-   	     		content: "<b> " + <%= activity.getTitle() %> + "</b><br/>"
-        		  +"Start: " + <%= activity.getStartDate() %> + " " + <%= activity.getStartTime() %> + "<br/>"
-        		  +"End: " + <%= activity.getEndDate() %> + " " + <%= activity.getEndTime() %> + "<br/>"
-        		  +"Description: " + <%= activity.getDescription() %>,
-        		  maxWidth: 400
-   	     	});
    	     	
    		      google.maps.event.addListener(marker, 'click', (function(marker,k) {
    		        return function() {
+   		        	infowindow.setContent("<b> <%= activity.getTitle() %></b><br/>"
+   		   	     		+"Start: <%= activity.getStartDate() %> <%= activity.getStartTime() %><br/>"
+   		      		  	+"End: <%= activity.getEndDate() %> <%= activity.getEndTime() %><br/>"
+   		      		  	+"Description: <%= activity.getDescription() %>"),
    		          infowindow.open(map, marker);
    		        }
-   		      })(marker, k));
+   		      })(marker, i));
    		      
    		      google.maps.event.addListener(marker,'dblclick', (function(marker,k) {
    		    	  return function(){
@@ -87,8 +85,10 @@
    		    	    map.setCenter(marker.getPosition());
    		    	    window.location.href = this.url;
    		    	  }
-   		    	 })(marker, k));
-    	<%}%> 
+   		    	 })(marker, i));
+    	<%
+    		i++;
+    	}%> 
 	 
     }
     
@@ -105,7 +105,6 @@
 			userID = Integer.parseInt(userIDStr.trim());
 		}
 	}
-	System.out.println(userID);
 	%>
 	
 	<div id="Map">

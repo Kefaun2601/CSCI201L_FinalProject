@@ -13,6 +13,8 @@
 	<%  
 	int activityID = Integer.parseInt(request.getParameter("activityID"));
 	Activity activity = Helper.getActivityByID(activityID);
+	System.out.println(activity.getLat());
+	System.out.println(activity.getLon());
 	%>
 	<script>
 			
@@ -29,15 +31,15 @@
 		          var longitude = -118.28511714935303; 
 		          
 		    	var myLatlng = {lat: latitude, lng: longitude};
-		    	var marker=new google.maps.Marker({
-    		        position: new google.maps.LatLng('<%=activity.getLat()%>', '<%=activity.getLon()%>'),
-    		        map: map
-    		      });
-		    	
 		        map = new google.maps.Map(document.getElementById('map'), {
 		          center: myLatlng,
 		          zoom: 16
 		        });
+		        
+		        var marker=new google.maps.Marker({
+		    		position: new google.maps.LatLng(<%= activity.getLat() %>, <%= activity.getLon() %>),
+    		        map: map
+    		      });
 		
 		        google.maps.event.addListener(map,'click', function(event) {
 		            off();

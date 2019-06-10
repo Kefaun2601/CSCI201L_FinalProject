@@ -21,7 +21,6 @@
 	
 	// unchecked if userID == -1 but they should only be here if logged in anyways
 	User usr = Helper.getUserByID(userID);
-	System.out.println(usr.getFname());
 	%>	
 	
 		function updateProfile() {

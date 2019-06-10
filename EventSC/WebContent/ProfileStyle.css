@@ -405,3 +405,7 @@ a {
 #formGradYear {
 	width: 35%;
 }
+
+::placeholder { 
+  color: #c3c3c3;
+}
