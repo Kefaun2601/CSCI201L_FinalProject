@@ -9,7 +9,7 @@ public class DBConnection {
 	
 	private String url = "jdbc:mysql://localhost:3306/CSCI201L_FinalProject";	
 	private String user = "root";//username
-	private String password = "root";//password
+	private String password = "MySQLCS201!";//password
 	
 	public DBConnection() {
 		

@@ -201,6 +201,21 @@ body, html {
 	display: block;
 }
 
+#Filter_Name{
+	width: 115%;
+	z-index: 30;
+	display: block;
+	cursor: pointer;
+}
+
+#Filter_Date{
+	width: 115%;
+	z-index: 30;
+	display: block;
+	cursor: pointer;
+}
+
+
 #Register {
 	opacity: 1;
 	position: absolute;

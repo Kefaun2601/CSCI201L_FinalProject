@@ -151,12 +151,12 @@
 					
 				</div>
 				<% if (otherID == -1) { %><input type="image" id="profileSaveChanges" src="img/save_changes_button.png" />
-			</form><% } %>
+			</form>
 			<form action = "ImageUpload" id="ImageUpload" method = "post" enctype = "multipart/form-data">
        				<input type = "file" name = "file" size = "50" />
 				    <br />
 				    <input type = "submit" value = "Upload File" />
-			</form>
+			</form><% } %>
 		</div>
 	</div>
 <script>

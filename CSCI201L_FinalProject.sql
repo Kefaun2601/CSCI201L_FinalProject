@@ -42,16 +42,16 @@ CREATE TABLE Comments (
 );
 
 INSERT INTO Users (email,passHash,fname,lname,phone,profilepic,gradyear,major)
- VALUES ("runshi@usc.edu", "257227","Justin","Gu",2138087452,"img/initiator.png",2021,"CSGM"),
-     ("aadani@usc.edu", "257227","Arav","Adani",2138087452,"img/interested1.png",2022,"CSCI"),
-                    ("yunbao@usc.edu", "257227","Yun","Bao",2138087452,"img/interested2.png",2021,"PSYC"),
-                    ("tianhual@usc.edu", "257227","Tianhua","Lyu",2138087452,"img/interested3.png",2021,"CECS"),
-                    ("kevinyya@usc.edu", "257227","Kevin","Yan",2138087452,"img/interested3.png",2022,"CSCI");
+ VALUES	("runshi@usc.edu", "257227","Justin","Gu",2138087452,"img/initiator.png",2021,"CSGM"),
+		("aadani@usc.edu", "257227","Arav","Adani",2138087452,"img/interested1.png",2022,"CSCI"),
+		("yunbao@usc.edu", "257227","Yun","Bao",2138087452,"img/interested2.png",2021,"PSYC"),
+		("tianhual@usc.edu", "257227","Tianhua","Lyu",2138087452,"img/interested3.png",2021,"CECS"),
+        ("kevinyya@usc.edu", "257227","Kevin","Yan",2138087452,"img/interested3.png",2022,"CSCI");
                     
 
-INSERT INTO Activities ( userID,title,description,lat,lon,startDate,startTime,endDate,endTime)
- VALUES (1,"Team Meeting", "Coding the final PORJECT", 34.018798,-118.281716,"2019-06-08","15:34","2019-06-10","02:00"),
-     (2,"CSCI201 graduation party", "Please have fun with Prof. Miller at the <br/>end of class", 34.021221,-118.284189,"2019-06-11","10:00","2019-06-11","13:50"),
-                    (3,"Octopus Party", "Please have fun with Arav and our friends<br/> from the Ocean", 34.020946,-118.283154,"2019-06-01","00:00","2019-06-13","23:00"),
-                    (4,"Hotpot dinner At Leavey", "Enjoy free hotpot brought by Uniboil!", 34.021693,-118.282792,"2019-07-08","17:00","2019-07-08","20:00"),
-                    (5,"Multi-Threading competition in YOUR HEART", "Compete with students from UCLA in SAL, <br/>take your chance to show our power", 34.01953,-118.289527,"2019-09-01","15:00","2019-09-03","15:00");
+INSERT INTO Activities ( userID,title,description,lat,lon,startDate,startTime,endDate,endTime,picture)
+ VALUES	(1,"Team Meeting", "Coding the final PROJECT", 34.018798,-118.281716,"2019-06-08","15:34","2019-06-10","02:00","img/event_icon1.png"),
+		(2,"CSCI201 graduation party", "Please have fun with Prof. Miller at the end of class", 34.021221,-118.284189,"2019-06-11","10:00","2019-06-11","13:50","img/event_icon3.png"),
+		(3,"Octopus Party", "Please have fun with Arav and our friends from the Ocean", 34.020946,-118.283154,"2019-06-01","00:00","2019-06-13","23:00","img/event_icon7.png"),
+		(4,"Hotpot dinner At Leavey", "Enjoy free hotpot brought by Uniboil!", 34.021693,-118.282792,"2019-07-08","17:00","2019-07-08","20:00","img/event_icon4.png"),
+		(5,"Multi-Threading competition in YOUR HEART", "Compete with students from UCLA in SAL, take your chance to show our power", 34.01953,-118.289527,"2019-09-01","15:00","2019-09-03","15:00","img/event_icon5.png");

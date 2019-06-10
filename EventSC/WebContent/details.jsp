@@ -114,15 +114,15 @@
 			<div id="EventIcon">
 				<img id="EventPic" src="img/event_icon7.png">
 			</div>
-			<div id="Event_Name" style="overflow-y: scroll; width: 345px; height: 70px;">
-				<span><%= activity.getTitle() %></span>
+			<div id="Event_Name">
+				<span style="max-width: 100%; white-space: pre-wrap; word-wrap: break-word;"><%= activity.getTitle() %></span>
 			</div>
 			<div id="DATE__TIME__Location_">
 				<div id="startInfo">Start: <%= activity.getStartDate() %> <%= activity.getStartTime() %></div>
 				<div id="endInfo">End: <%= activity.getEndDate() %> <%= activity.getEndTime() %></div>
 				<div id="locationInfo">Location:</div>
 				<div id="descriptionTitle">Description:</div>
-				<div id="descriptionInfo" style=" width: 345px; height: 170px;"><p style="overflow-wrap: break-word;"><%=activity.getDescription()%></p></div>
+				<div id="descriptionInfo" style="max-width: 100%; white-space: pre-wrap; word-wrap: break-word;"><%=activity.getDescription()%></div>
 			</div>
 			<div id="Initiator_">
 				<span style="">Initiator</span>

@@ -249,7 +249,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: visible;
-	width: 322px;
+	width: 70%;
 	white-space: nowrap;
 	text-align: left;
 	font-family: Avenir;
@@ -262,12 +262,12 @@ body {
 	opacity: 1;
 	position: absolute;
 	left: 25%;
-	top: 18%;
+	top: 28%;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	overflow: visible;
-	width: 139px;
+	width: 70%;
 	white-space: nowrap;
 	text-align: left;
 	font-family: Helvetica Neue;
@@ -277,12 +277,16 @@ body {
 	color: rgba(100,95,95,1);
 }
 
+#DATE__TIME__Location_ div {
+	padding: 20px 0px 0px 0px;
+}
+
 
 #Initiator_ {
 	opacity: 1;
 	position: absolute;
-	left: 65%;
-	top: 19%;
+	left: 75%;
+	top: 33%;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -299,8 +303,8 @@ body {
 #Interested {
 	opacity: 1;
 	position: absolute;
-	left: 65%;
-	top: 37%;
+	left: 75%;
+	top: 50%;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -376,8 +380,8 @@ body {
 	overflow: visible;
 	width: 8%;
 	height: 15%;
-	left: 64%;
-	top: 5%;
+	left: 75%;
+	top: 18%;
 }
 
 #User1Pic {
@@ -385,8 +389,8 @@ body {
 	overflow: visible;
 	width: 8%;
 	height: 15%;
-	left: 64%;
-	top: 23%;
+	left: 75%;
+	top: 36%;
 }
 
 #User2Pic {
@@ -394,8 +398,8 @@ body {
 	overflow: visible;
 	width: 8%;
 	height: 15%;
-	left: 72%;
-	top: 23%;
+	left: 83%;
+	top: 36%;
 }
 
 #User3Pic {
@@ -403,8 +407,8 @@ body {
 	overflow: visible;
 	width: 8%;
 	height: 15%;
-	left: 80%;
-	top: 23%;
+	left: 91%;
+	top: 36%;
 }
 #overlay {
 	position: fixed;
@@ -421,7 +425,7 @@ body {
 }
 #google{
 	position: absolute;
-	top: 61%;
+	top: 70%;
 	left: 43%;
 	height: 40px;
 	width: 40px;

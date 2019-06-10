@@ -355,7 +355,7 @@ a {
 #profileSaveChanges {
 	position: absolute;
 	left: 25%;
-	top: 80%;
+	top: 84%;
 	width: 20%;
 	height: 10%;
 	cursor: pointer;
@@ -409,7 +409,7 @@ a {
 #ImageUpload {
 	position: absolute;
 	z-index: 10;
-	top: 65%;
+	top: 71%;
 	left: 25%;
 }
 

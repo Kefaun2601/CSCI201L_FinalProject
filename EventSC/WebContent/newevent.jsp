@@ -142,7 +142,7 @@
 		<div id="Group_13">
 			<a href="index.jsp"><img id="Backtomap" src="img/BackToMap.png" style="cursor: pointer;"></a>
 		</div>
-		<form id="NewEvent" name="NewEvent" action="index.jsp" method="GET" onsubmit="return validateEvent();">
+		<form id="NewEvent" name="NewEvent" action="NewActivity" method="GET" onsubmit="return validateEvent();">
 			<div id="Group_19">
 				<div id="Event_Name_A7_Text_7">
 					<span>Event Name</span><span style="color:red;font-size:25px;">*</span><br>
