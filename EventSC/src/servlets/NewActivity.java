@@ -39,14 +39,14 @@ public class NewActivity extends HttpServlet {
 		HttpSession session=request.getSession();
 		
 		int userID = (Integer)session.getAttribute("userID");
-		String title = request.getParameter("title");
-		String description = request.getParameter("description");
-		float lat = Float.parseFloat(request.getParameter("lat"));
-		float lon = Float.parseFloat(request.getParameter("lon"));
-		String startDate = request.getParameter("startDate");
-		String startTime = request.getParameter("startTime");
-		String endDate = request.getParameter("endDate");
-		String endTime = request.getParameter("endTime");
+		String title = request.getParameter("Name");
+		String description = request.getParameter("Description");
+		float lat = Float.parseFloat(request.getParameter("Lat"));
+		float lon = Float.parseFloat(request.getParameter("Lon"));
+		String startDate = request.getParameter("Date_Start");
+		String startTime = request.getParameter("Time_Start");
+		String endDate = request.getParameter("Date_End");
+		String endTime = request.getParameter("Time_End");
 		
 		String randomImage = profileImagePaths.get(randomInt(0, profileImagePaths.size()-1));
 		
@@ -78,7 +78,7 @@ public class NewActivity extends HttpServlet {
 		
 		db.executeUpdate(query);
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/index.jsp");
-		  dispatch.forward(request,response);
+		dispatch.forward(request,response);
 	}
 
 }

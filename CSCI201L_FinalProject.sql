@@ -22,9 +22,9 @@ CREATE TABLE Activities (
     description VARCHAR(45),
     lat FLOAT(10,6), -- xxxx.xxxxxx
     lon FLOAT(10,6), -- xxxx.xxxxxx
-    startDate VARCHAR(8), -- MM/DD/YY
+    startDate VARCHAR(10), -- YYYY-MM-DD
     startTime VARCHAR(5), -- HH:MM
-    endDate VARCHAR(8), -- MM/DD/YY
+    endDate VARCHAR(10), -- YYYY-MM-DD
     endTime VARCHAR(6), -- HH:MM
     timeCreated TIMESTAMP,
     picture VARCHAR(45), -- image path

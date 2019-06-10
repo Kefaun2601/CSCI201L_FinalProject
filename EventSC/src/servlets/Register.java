@@ -63,7 +63,6 @@ public class Register extends HttpServlet {
 	}
 	
 	private static void addUserDB(String username, String password) {
-		System.out.println("adding user");
 		DBConnection db = new DBConnection();
 		db.getConnection();
 		String randomImage = profileImagePaths.get(randomInt(0, profileImagePaths.size()-1));

@@ -139,7 +139,7 @@
 			</div> 
 			
 			<div id="Register">
-				<span><a href="Logout" style="color: rgba(248,240,240,1);">Logout</a></span>
+				<span><a href="index.jsp" id="signout" style="color: rgba(248,240,240,1);">Logout</a></span>
 			</div>
 		<%		
 			}
@@ -170,6 +170,18 @@
 		</div>
 	</div>
 	
+	
+	<script>
+		document.getElementById("signout").onclick = function(event) {
+		    event.preventDefault();
+		    
+		    var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "Logout", false);
+			xhttp.send();
+		    
+		    window.location = "index.jsp";
+		};
+	</script>
 	
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB_WPm3Y2eL3aSvs64KYGkDoQ_F4RYatE&language=en&callback=initMap"
     async defer></script>

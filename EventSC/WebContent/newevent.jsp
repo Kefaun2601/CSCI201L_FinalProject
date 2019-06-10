@@ -77,7 +77,7 @@
 			</div> 
 			
 			<div id="Register">
-				<span><a href="Logout" style="color: rgba(248,240,240,1);">Logout</a></span>
+				<span><a href="index.jsp" id="signout" style="color: rgba(248,240,240,1);">Logout</a></span>
 			</div>
 		<%		
 			}

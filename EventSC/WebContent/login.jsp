@@ -8,7 +8,6 @@
 	<script>
 		function validateForm() {
 			// set error message div to empty here
-			
 			var xhttp = new XMLHttpRequest();
 			xhttp.open("GET", "Login?" +
 						"username=" + document.getElementsByName("email")[0].value +
@@ -17,10 +16,12 @@
 			xhttp.send();
 			if (xhttp.responseText.trim() == "1") {
 				// set error message div to "Incorrect password." here
+				document.getElementById("ErrorMessage").innerHTML = "Incorrect password.";
 				return false;
 			}
 			else if (xhttp.responseText.trim() == "2") {
 				// set error message div to "This user does not exist." here
+				document.getElementById("ErrorMessage").innerHTML = "This user does not exist.";
 				return false;
 			}
 			return true;
@@ -75,17 +76,14 @@
 					<span>Password</span>
 					<br/>
 					<input type="password" class="loginInput" name="password" />
+					<span id="ErrorMessage"></span>
 				</div>
-				<img src="img/login_button.png" id="loginButton" style="position: absolute; z-index: 1; bottom: 15%; left: 35%; cursor: pointer;" />
+				<input type="image" src="img/login_button.png" id="loginButton" style="position: absolute; z-index: 1; bottom: 15%; left: 35%; cursor: pointer;" />
 			</form>
 		</div>
 	</div>
 </div>
 
-<script>
-document.getElementById("loginButton").onclick = function(event) {
-	document.getElementById("loginForm").submit();
-};
-</script>
+
 </body>
 </html>

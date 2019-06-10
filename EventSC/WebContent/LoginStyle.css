@@ -269,6 +269,25 @@ body {
 	color: rgba(100,95,95,1);
 	letter-spacing: 0.1px;
 }
+#ErrorMessage {
+	opacity: 1;
+	position: absolute;
+	left: 0%;
+	top: 215%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 204px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Sukhumvit Set;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	color: rgba(193, 31, 31, 1);
+	letter-spacing: 0.1px;
+}
 #Rectangle_14 {
 	opacity: 1;
 	fill: rgba(255,255,255,1);

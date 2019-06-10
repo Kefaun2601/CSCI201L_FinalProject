@@ -41,7 +41,7 @@
 										End: <%= activity.getEndDate() + " " + activity.getEndTime() %><br/>
 								</span>
 					<span Class="info">
-										Description: <%= activity.getDescription().substring(0,60) + "..." %><br/>
+										Description: <%= (activity.getDescription().length() > 60) ? activity.getDescription().substring(0,60) + "..." : activity.getDescription() %><br/>
 								</span>
 				</td>
 			</tr>
@@ -83,7 +83,7 @@
 			</div> 
 			
 			<div id="Register">
-				<span><a href="Logout" style="color: rgba(248,240,240,1);">Logout</a></span>
+				<span><a href="index.jsp" id="signout" style="color: rgba(248,240,240,1);">Logout</a></span>
 			</div>
 		<%		
 			}
@@ -111,6 +111,18 @@
 		</div>
 	</div>
 	
+	
+	<script>
+		document.getElementById("signout").onclick = function(event) {
+		    event.preventDefault();
+		    
+		    var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "Logout", false);
+			xhttp.send();
+		    
+		    window.location = "index.jsp";
+		};
+	</script>
 	
 </body>
 </html>
