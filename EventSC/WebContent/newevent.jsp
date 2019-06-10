@@ -47,6 +47,11 @@
 				userID = Integer.parseInt(userIDStr.trim());
 			}
 		}
+		
+		if (userID == -1) {
+			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/login.jsp");
+			dispatch.forward(request,response);
+		}
 %>
 
 	<div id="New_Event_Page">

@@ -13,8 +13,6 @@
 	<%  
 	int activityID = Integer.parseInt(request.getParameter("activityID"));
 	Activity activity = Helper.getActivityByID(activityID);
-	System.out.println(activity.getLat());
-	System.out.println(activity.getLon());
 	%>
 	<script>
 			

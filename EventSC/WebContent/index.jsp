@@ -60,7 +60,6 @@
     	while (it.hasNext()) {  
     		Map.Entry<Integer, Coordinate> entry = (Map.Entry<Integer, Coordinate>)it.next();
 			Activity activity = Helper.getActivityByID(entry.getKey());
-			String tempName=activity.getTitle();
 			int i=0;%>
 			
    	    	marker = new google.maps.Marker({
