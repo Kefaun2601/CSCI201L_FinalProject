@@ -2,6 +2,7 @@
 <%@ page import="utility.Helper" %>
 <%@ page import="utility.Activity" %>
 <%@ page import="java.util.Comparator" %>
+<%@ page import="java.util.Collections" %>
 
 <!DOCTYPE html>
 <html>
@@ -28,38 +29,7 @@
 			}
 		}
 	}
-	private static class NameCompRev implements Comparator<Integer>{
-		public int compare(Integer one, Integer two) {
-			Activity aOne = Helper.getActivityByID(one);
-			Activity aTwo = Helper.getActivityByID(two);
-			if (aOne.getTitle().compareTo(aTwo.getTitle()) < 0) {
-				return 1;
-			} else if (aOne.getTitle().compareTo(aTwo.getTitle()) > 0) {
-				return -1;
-			}
-			else {
-				return 0;
-			}
-		}
-	}
-	
 	private static class DateComp implements Comparator<Integer>{
-		public int compare(Integer one, Integer two) {
-			Activity aOne = Helper.getActivityByID(one);
-			Activity aTwo = Helper.getActivityByID(two);
-			String aOneStr = aOne.getStartDate() + " " + aOne.getStartTime();
-			String aTwoStr = aTwo.getStartDate() + " " + aTwo.getStartTime();
-			if (aOneStr.compareTo(aTwoStr) < 0) {
-				return 1;
-			} else if (aOneStr.compareTo(aTwoStr) > 0) {
-				return -1;
-			}
-			else {
-				return 0;
-			}
-		}
-	}
-	private static class DateCompRev implements Comparator<Integer>{
 		public int compare(Integer one, Integer two) {
 			Activity aOne = Helper.getActivityByID(one);
 			Activity aTwo = Helper.getActivityByID(two);
@@ -85,12 +55,23 @@
 			userID = Integer.parseInt(userIDStr.trim());
 		}
 	}
+	
+	
 	%>
 	<table id ="list" cellspacing="12px">
 		<tbody>
 			<%
 			ArrayList<Integer> ids = Helper.getActivityIDs();
-			// sorting would required sorting the ids arraylist here
+			
+			String sortCriteria = request.getParameter("sort");
+			if (sortCriteria != null && sortCriteria.trim().length() > 0) {
+				sortCriteria = sortCriteria.trim().toLowerCase();
+				if (sortCriteria.equals("namecomp")) Collections.sort(ids, new NameComp());
+				else if (sortCriteria.equals("datecomp")) Collections.sort(ids, new DateComp());
+			}
+			else {
+				Collections.sort(ids, new NameComp());
+			}
 			
 			for (int i = 0; i < ids.size(); i++) {
 				Activity activity = Helper.getActivityByID(ids.get(i));
@@ -98,14 +79,14 @@
 			<tr class="row">
 				<td class="icon">
 					<img src="<%= activity.getPicture() %>">
-					<span class="EventName"><a href="details.jsp?activityID=<%= activity.getActivityID() %>"><%= activity.getTitle() %></a></span> <br>
-					<span Class="info">
+					<span class="EventName"><a href="details.jsp?activityID=<%= activity.getActivityID() %>" style="color: rgba(100,95,95,1);"><%= activity.getTitle() %></a></span> <br>
+					<span class="info">
 										Start: <%= activity.getStartDate() + " " + activity.getStartTime() %><br/>
 								</span>
-					<span Class="info">
+					<span class="info">
 										End: <%= activity.getEndDate() + " " + activity.getEndTime() %><br/>
 								</span>
-					<span Class="info">
+					<span class="info">
 										Description: <%= (activity.getDescription().length() > 60) ? activity.getDescription().substring(0,60) + "..." : activity.getDescription() %><br/>
 								</span>
 				</td>
@@ -172,7 +153,11 @@
 			<a href="index.jsp"><img id="Map" src="img/map_view_button.png"></a>
 		</div>
 		<div id="Group_12">
-			<img id="Filter" src="img/sort_button.png">
+			<% if(sortCriteria != null && sortCriteria.trim().length() > 0 && sortCriteria.toLowerCase().equals("datecomp")) { %>
+				<a href="list.jsp?sort=namecomp"><img id="Filter_Name" src="img/sortByName.png"></a>
+			<% } else { %>
+				<a href="list.jsp?sort=datecomp"><img id="Filter_Date" src="img/SortByTime.png"></a>
+			<% } %>
 		</div>
 	</div>
 	
