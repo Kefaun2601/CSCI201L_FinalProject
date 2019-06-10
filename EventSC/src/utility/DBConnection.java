@@ -38,6 +38,7 @@ public class DBConnection {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+		//closeConnection();
 		return rs;
 	}
 	
@@ -54,6 +55,7 @@ public class DBConnection {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+		//closeConnection();
 		return false;
 	}	
 	

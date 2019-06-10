@@ -14,39 +14,6 @@
 </head>
 <body>
 
-	<%! // comparator functions
-	private static class NameComp implements Comparator<Integer>{
-		public int compare(Integer one, Integer two) {
-			Activity aOne = Helper.getActivityByID(one);
-			Activity aTwo = Helper.getActivityByID(two);
-			if (aOne.getTitle().compareTo(aTwo.getTitle()) > 0) {
-				return 1;
-			} else if (aOne.getTitle().compareTo(aTwo.getTitle()) < 0) {
-				return -1;
-			}
-			else {
-				return 0;
-			}
-		}
-	}
-	private static class DateComp implements Comparator<Integer>{
-		public int compare(Integer one, Integer two) {
-			Activity aOne = Helper.getActivityByID(one);
-			Activity aTwo = Helper.getActivityByID(two);
-			String aOneStr = aOne.getStartDate() + " " + aOne.getStartTime();
-			String aTwoStr = aTwo.getStartDate() + " " + aTwo.getStartTime();
-			if (aOneStr.compareTo(aTwoStr) > 0) {
-				return 1;
-			} else if (aOneStr.compareTo(aTwoStr) < 0) {
-				return -1;
-			}
-			else {
-				return 0;
-			}
-		}
-	}
-	%>
-
 	<%
 	int userID = -1;
 	if (session.getAttribute("userID") != null) {
@@ -61,20 +28,20 @@
 	<table id ="list" cellspacing="12px">
 		<tbody>
 			<%
-			ArrayList<Integer> ids = Helper.getActivityIDs();
+			ArrayList<Activity> activities = new ArrayList<Activity>();
 			
 			String sortCriteria = request.getParameter("sort");
 			if (sortCriteria != null && sortCriteria.trim().length() > 0) {
 				sortCriteria = sortCriteria.trim().toLowerCase();
-				if (sortCriteria.equals("namecomp")) Collections.sort(ids, new NameComp());
-				else if (sortCriteria.equals("datecomp")) Collections.sort(ids, new DateComp());
+				if (sortCriteria.equals("namecomp")) activities = Helper.getAllActivities("title", "ASC");
+				else if (sortCriteria.equals("datecomp")) activities = Helper.getAllActivities("startDate", "ASC");
 			}
 			else {
-				Collections.sort(ids, new NameComp());
+				activities = Helper.getAllActivities("title", "ASC");
 			}
 			
-			for (int i = 0; i < ids.size(); i++) {
-				Activity activity = Helper.getActivityByID(ids.get(i));
+			for (int i = 0; i < activities.size(); i++) {
+				Activity activity = activities.get(i);
 			%>
 			<tr class="row">
 				<td class="icon">

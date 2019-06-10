@@ -100,4 +100,35 @@ public class Helper {
 		return ids;
 	}
 	
+	public static ArrayList<Activity> getAllActivities(String sort, String dir) {
+		ArrayList<Activity> activities = new ArrayList<Activity>();
+		try {
+			DBConnection db = new DBConnection();
+			db.getConnection();
+			ResultSet rs = db.executeQuery("SELECT * FROM Activities ORDER BY " + sort + " " + dir+ ";");
+			while (rs.next()) {
+				int activityID = rs.getInt("activityID");
+				int userID = rs.getInt("userID");
+				String title = rs.getString("title");
+				String description = rs.getString("description");
+				float lat = rs.getFloat("lat");
+				float lon = rs.getFloat("lon");
+				String startDate = rs.getString("startDate");
+				String startTime = rs.getString("startTime");
+				String endDate = rs.getString("endDate");
+				String endTime = rs.getString("endTime");
+				String picture = rs.getString("picture");
+				
+				Activity na = new Activity(activityID, userID, title, description, lat, lon,
+									startDate, startTime, endDate, endTime, "", picture);
+			
+				activities.add(na);
+			}
+		} catch(SQLException sqle) {
+			System.out.println("sqle: " + sqle.getMessage());
+		}
+		
+		return activities;
+	}
+	
 }
