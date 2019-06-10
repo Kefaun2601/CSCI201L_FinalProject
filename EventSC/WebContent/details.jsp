@@ -11,8 +11,15 @@
 	<title>EventSC</title>
 	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="DetailStyle.css"/>
 	<%  
-	int activityID=Integer.parseInt(request.getParameter("activityID"));
-	Activity activity = Helper.getActivityByID(activityID);
+		//debug use
+		Activity activity = new Activity();
+		if(request.getParameter("activityID")!=null){
+			int activityID=Integer.parseInt(request.getParameter("activityID"));
+			activity = Helper.getActivityByID(activityID);
+		}
+		else{
+			
+		}
 	%>
 	<script>
 			
@@ -75,20 +82,35 @@
 	<div id="EventSc">
 		<a href="index.jsp"><span style="color:white;">Event</span><span style="color:rgba(246,190,52,1);">SC</span></a>
 	</div>
-	<svg class="Rectangle_2">
-	</svg>
-	<div id="Login">
-		<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
-	</div>
+	
+		<% 
+			if(userID != -1){
+		%>
+			<div id="Login">
+				<span><a href="profile.jsp" style="color: rgba(248,240,240,1);">Profile</a></span>
+			</div> 
+			
+			<div id="Register">
+				<span><a href="Logout" style="color: rgba(248,240,240,1);">Logout</a></span>
+			</div>
+		<%		
+			}
+			else if(userID == -1){
+		%>
+			<div id="Login">
+				<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
+			</div>
+			<div id="Register">
+				<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
+			</div>
+		<% 
+			}
+		%>
+		
 	<svg class="Rectangle_2">
 		
 	</svg>
 	
-	
-	<div id="Register">
-		<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
-	</div>
-
 	<div id="Group_13">
 		<a href="index.jsp"><img id="Backtomap" src="img/BackToMap.png"></a>
 	</div>
@@ -100,7 +122,7 @@
 				<img id="EventPic" src="img/event_icon7.png">
 			</div>
 			<div id="Event_Name">
-				<span><%= activity.getTitle() %>Name</span>
+				<span><%= activity.getTitle() %></span>
 			</div>
 			<div id="DATE__TIME__Location_">
 				<div id="startInfo">Start: <%= activity.getStartDate() %> <%= activity.getStartTime() %></div>

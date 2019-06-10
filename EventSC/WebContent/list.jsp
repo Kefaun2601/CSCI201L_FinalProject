@@ -12,6 +12,15 @@
 </head>
 <body>
 
+<%
+	int userID = -1;
+	if (session.getAttribute("userID") != null) {
+		String userIDStr = "" + session.getAttribute("userID");
+		if (userIDStr != null && !userIDStr.trim().equals("")) {
+			userID = Integer.parseInt(userIDStr.trim());
+		}
+	}
+%>
 	<table id ="list" cellspacing="12px">
 		<tbody>
 			<%
@@ -24,7 +33,7 @@
 			<tr class="row">
 				<td class="icon">
 					<img src="<%= activity.getPicture() %>">
-					<span class="EventName"><%= activity.getTitle() %></span> <br>
+					<span class="EventName"><a href="details.jsp?activityID=<%= activity.getActivityID() %>"><%= activity.getTitle() %></a></span> <br>
 					<span Class="info">
 										Start: <%= activity.getStartDate() + " " + activity.getStartTime() %><br/>
 								</span>
@@ -65,18 +74,37 @@
 		</div>
 		<svg class="Rectangle_2">
 		</svg>
-		<div id="Login">
-			<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
-		</div>
+		
+		<% 
+			if(userID != -1){
+		%>
+			<div id="Login">
+				<span><a href="profile.jsp" style="color: rgba(248,240,240,1);">Profile</a></span>
+			</div> 
+			
+			<div id="Register">
+				<span><a href="Logout" style="color: rgba(248,240,240,1);">Logout</a></span>
+			</div>
+		<%		
+			}
+			else if(userID == -1){
+		%>
+			<div id="Login">
+				<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
+			</div>
+			<div id="Register">
+				<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
+			</div>
+		<% 
+			}
+		%>
+		
 	
 		<div id="Group_7">
 			<a href="newevent.jsp"><img id="NewEvent" src="img/new_event_button.png"></a>
 		</div>
 		<div id="Group_9">
 			<a href="index.jsp"><img id="Map" src="img/map_view_button.png"></a>
-		</div>
-		<div id="Register">
-			<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
 		</div>
 		<div id="Group_12">
 			<img id="Filter" src="img/sort_button.png">

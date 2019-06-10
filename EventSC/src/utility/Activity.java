@@ -14,6 +14,10 @@ public class Activity {
 	private String timeCreated;
 	private String picture;
 	
+	public Activity() {
+		
+	}
+	
 	public Activity(int a, int u, String t, String d, float lt, float ln, 
 					String sd, String st, String ed, String et, String tc, String p)
 	{

@@ -10,7 +10,7 @@
 			// set error message div to empty here
 			
 			var xhttp = new XMLHttpRequest();
-			xhttp.open("GET", "/Register?" +
+			xhttp.open("GET", "Register?" +
 						"username=" + document.getElementsByName("email")[0].value +
 						"&password=" + document.getElementsByName("password")[0].value +
 						"&passwordConf=" + document.getElementsByName("passwordConf")[0].value
@@ -76,7 +76,7 @@
 					<br/>
 					<input type="password" class="registerInput" name="password" />
 				</div>
-				<img src="img/register_button.png" id="registerButton" style="position: absolute; z-index: 1; bottom: 10%; left: 38%; cursor: pointer;" />
+				<input type="image" src="img/register_button.png" id="registerButton" style="position: absolute; z-index: 1; bottom: 10%; left: 38%; cursor: pointer;" />
 				<div id="Confirm_Password">
 					<span>Confirm Password</span>
 					<br/>
@@ -87,10 +87,6 @@
 	</div>
 </div>
 
-<script>
-document.getElementById("registerButton").onclick = function(event) {
-	document.getElementById("loginForm").submit();
-};
-</script>
+
 </body>
 </html>

@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import utility.DBConnection;
 
@@ -34,7 +36,9 @@ public class NewActivity extends HttpServlet {
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int userID = Integer.parseInt(request.getParameter("userID"));
+		HttpSession session=request.getSession();
+		
+		int userID = (Integer)session.getAttribute("userID");
 		String title = request.getParameter("title");
 		String description = request.getParameter("description");
 		float lat = Float.parseFloat(request.getParameter("lat"));
@@ -73,6 +77,8 @@ public class NewActivity extends HttpServlet {
 		query += ");";
 		
 		db.executeUpdate(query);
+		RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/index.jsp");
+		  dispatch.forward(request,response);
 	}
 
 }

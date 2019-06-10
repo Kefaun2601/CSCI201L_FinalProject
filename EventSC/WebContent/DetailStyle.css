@@ -152,6 +152,7 @@ body {
 	font-weight: normal;
 	font-size: 28px;
 	color: rgba(248,240,240,1);
+	z-index: 5;
 }
 
 .Rectangle_7 {
@@ -276,24 +277,7 @@ body {
 	color: rgba(100,95,95,1);
 }
 
-#Lorem_ipsum_dolor_sit_amet__co {
-	opacity: 1;
-	position: absolute;
-	left: 5%;
-	top: 50%;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	width: 90%;
-	height: 50%%;
-	text-align: left;
-	font-family: Helvetica Neue;
-	font-style: normal;
-	font-weight: ;
-	font-size: 24px;
-	color: rgba(100,95,95,1);
-}
+
 #Initiator_ {
 	opacity: 1;
 	position: absolute;

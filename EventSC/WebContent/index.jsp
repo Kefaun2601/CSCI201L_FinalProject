@@ -96,7 +96,18 @@
     </script>
 	</head>
 <body>
-
+	
+	<%
+	int userID = -1;
+	if (session.getAttribute("userID") != null) {
+		String userIDStr = "" + session.getAttribute("userID");
+		if (userIDStr != null && !userIDStr.trim().equals("")) {
+			userID = Integer.parseInt(userIDStr.trim());
+		}
+	}
+	System.out.println(userID);
+	%>
+	
 	<div id="Map">
 		<!-- header and background -->	
 		<div id="Group_18">
@@ -119,17 +130,36 @@
 		</div>
 		<svg class="Rectangle_2">
 		</svg>
-		<div id="Login">
-			<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
-		</div>
+		
+		<% 
+			if(userID != -1){
+		%>
+			<div id="Login">
+				<span><a href="profile.jsp" style="color: rgba(248,240,240,1);">Profile</a></span>
+			</div> 
+			
+			<div id="Register">
+				<span><a href="Logout" style="color: rgba(248,240,240,1);">Logout</a></span>
+			</div>
+		<%		
+			}
+			else if(userID == -1){
+		%>
+			<div id="Login">
+				<span><a href="login.jsp" style="color: rgba(248,240,240,1);">Login</a></span>
+			</div>
+			<div id="Register">
+				<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
+			</div>
+		<% 
+			}
+		%>
 		
 		<div id="Group_7">
 			<a href="newevent.jsp"><img id="NewEvent" src="img/new_event_button.png"></a>
 		</div>
 		
-		<div id="Register">
-			<span><a href="register.jsp" style="color: rgba(248,240,240,1);">Register</a></span>
-		</div>
+		
 		
 		<div id="Group_9">
 			<a href="list.jsp"><img id="ListView" src="img/list_view_button.png"></a>
