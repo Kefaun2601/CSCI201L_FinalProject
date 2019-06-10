@@ -36,6 +36,46 @@
 	            off();
 	            });
 	      }
+	      
+	      function validateEvent()
+	      {
+	    	  if(document.getElementById("Name").value.trim().length == 0)
+	    	  {
+	    		  alert("Event Name is required.");
+	    		  return false;
+	    	  }
+	    	  if(document.getElementById("date_start").value.trim().length == 0)
+	    	  {
+	    		  alert("Start Date is required.");
+	    		  return false;
+	    	  }
+	    	  if(document.getElementById("time_start").value.trim().length == 0)
+	    	  {
+	    		  alert("Start Time is required.");
+	    		  return false;
+	    	  }
+	    	  if(document.getElementById("date_end").value.trim().length == 0)
+	    	  {
+	    		  alert("End Start is required.");
+	    		  return false;
+	    	  }
+	    	  if(document.getElementById("time_end").value.trim().length == 0)
+	    	  {
+	    		  alert("End Time is required.");
+	    		  return false;
+	    	  }
+	    	  if(document.getElementById("lat").value.trim().length == 0)
+	    	  {
+	    		  alert("Location is required.");
+	    		  return false;
+	    	  }
+	    	  if(document.getElementById("lon").value.trim().length == 0)
+	    	  {
+	    		  alert("Location is required.");
+	    		  return false;
+	    	  }
+	    	  return true;
+	      }
 	</script>
 </head>
 <body>
@@ -102,7 +142,7 @@
 		<div id="Group_13">
 			<a href="index.jsp"><img id="Backtomap" src="img/BackToMap.png" style="cursor: pointer;"></a>
 		</div>
-		<form id="NewEvent" name="NewEvent" method="GET" action="NewActivity">
+		<form id="NewEvent" name="NewEvent" action="index.jsp" method="GET" onsubmit="return validateEvent();">
 			<div id="Group_19">
 				<div id="Event_Name_A7_Text_7">
 					<span>Event Name</span><span style="color:red;font-size:25px;">*</span><br>

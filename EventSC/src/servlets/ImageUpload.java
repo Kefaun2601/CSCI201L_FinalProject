@@ -1,17 +1,12 @@
 package servlets;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import java.io.*;
 import java.util.*;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,23 +17,30 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.output.*;
 
+import utility.Helper;
+import utility.User;
+
 @WebServlet("/ImageUpload")
 public class ImageUpload extends HttpServlet {
-
+	private static final long serialVersionUID = 1L;
 	private boolean isMultipart;
 	private String filePath;
-	private int maxFileSize = 50 * 1024;
-	private int maxMemSize = 4 * 1024;
+	private int maxFileSize = 500000 * 1024;
+	private int maxMemSize = 250000 * 1024;
 	private File file;
 
-	public void init() {
-		// Get the file location where it would be stored.
-		filePath = getServletContext().getInitParameter("file-upload");
+	public String path() {
+		return getServletContext().getRealPath("/") + "profileImages\\";
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
 
+		int userID = Integer.parseInt(""+request.getSession().getAttribute("userID"));
+		User usr = Helper.getUserByID(userID);
+		
+		filePath = path();
+		System.out.println(filePath);
 		// Check that we have a file upload request
 		isMultipart = ServletFileUpload.isMultipartContent(request);
 		response.setContentType("text/html");
@@ -88,16 +90,21 @@ public class ImageUpload extends HttpServlet {
 				if (!fi.isFormField()) {
 					// Get the uploaded file parameters
 					String fieldName = fi.getFieldName();
-					String fileName = fi.getName();
+					//String fileName = fi.getName();
+					String fileName = usr.getEmail().substring(0,usr.getEmail().length()-8) + ".png";
 					String contentType = fi.getContentType();
 					boolean isInMemory = fi.isInMemory();
 					long sizeInBytes = fi.getSize();
 
 					// Write the file
 					if (fileName.lastIndexOf("\\") >= 0) {
-						file = new File(filePath + fileName.substring(fileName.lastIndexOf("\\")));
+						//System.out.println("Saved path:" + filePath + fileName.substring(fileName.lastIndexOf("\\")));
+						file = new File(filePath + fileName);
+						usr.setProfilepic("profileImages/"+fileName);
 					} else {
-						file = new File(filePath + fileName.substring(fileName.lastIndexOf("\\") + 1));
+						//System.out.println("Saved path:" + filePath + fileName.substring(fileName.lastIndexOf("\\") + 1));
+						file = new File(filePath + fileName);
+						usr.setProfilepic("profileImages/"+fileName);
 					}
 					fi.write(file);
 					out.println("Uploaded Filename: " + fileName + "<br>");

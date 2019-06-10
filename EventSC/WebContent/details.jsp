@@ -114,7 +114,7 @@
 			<div id="EventIcon">
 				<img id="EventPic" src="img/event_icon7.png">
 			</div>
-			<div id="Event_Name">
+			<div id="Event_Name" style="overflow-y: scroll; width: 345px; height: 70px;">
 				<span><%= activity.getTitle() %></span>
 			</div>
 			<div id="DATE__TIME__Location_">
@@ -122,7 +122,7 @@
 				<div id="endInfo">End: <%= activity.getEndDate() %> <%= activity.getEndTime() %></div>
 				<div id="locationInfo">Location:</div>
 				<div id="descriptionTitle">Description:</div>
-				<div id="descriptionInfo"><%= activity.getDescription() %></div>
+				<div id="descriptionInfo" style=" width: 345px; height: 170px;"><p style="overflow-wrap: break-word;"><%=activity.getDescription()%></p></div>
 			</div>
 			<div id="Initiator_">
 				<span style="">Initiator</span>
@@ -131,16 +131,16 @@
 				<span>Interested</span>
 			</div>
 			<div id="initiatorPic">
-				<a href="profile.jsp"><img id="initiatorProfile" src="img/initiator.png" width="100%" height="100%"></a>
+				<a href="profile.jsp?otherID=<%= activity.getUserID() %>"><img id="initiatorProfile" src="<%= Helper.getUserByID(activity.getUserID()).getProfilepic() %>" width="100%" height="100%"></a>
 			</div>
 			<div id="User1Pic">
-				<a href="profile.jsp"><img id="User1Profile" src="img/interested1.png" width="100%" height="100%"></a>
+				<a href="profile.jsp?otherID=2"><img id="User1Profile" src="img/interested1.png" width="100%" height="100%"></a>
 			</div>
 			<div id="User2Pic">
-				<a href="profile.jsp"><img id="User2Profile" src="img/interested2.png" width="100%" height="100%"></a>
+				<a href="profile.jsp?otherID=3"><img id="User2Profile" src="img/interested2.png" width="100%" height="100%"></a>
 			</div>
 			<div id="User3Pic">
-				<a href="profile.jsp"><img id="User3profile" src="img/interested3.png" width="100%" height="100%"></a>
+				<a href="profile.jsp?otherID=4"><img id="User3profile" src="img/interested3.png" width="100%" height="100%"></a>
 			</div>
 			
 		</div>

@@ -19,8 +19,31 @@
 		}
 	}
 	
+	int otherID = -1;
+	if (request.getParameter("otherID") != null) {
+		String otherIDStr = "" + request.getParameter("otherID");
+		if (otherIDStr != null && !otherIDStr.trim().equals("")) {
+			otherID = Integer.parseInt(otherIDStr.trim());
+		}
+	}
+	
+	User usr = null;
+	if(otherID == -1)
+	{
+		usr = Helper.getUserByID(userID);
+	}
+	else if(otherID == userID)
+	{
+		usr = Helper.getUserByID(userID);
+		otherID = -1;
+	}
+	else
+	{
+		usr = Helper.getUserByID(otherID);
+	}
+	
 	// unchecked if userID == -1 but they should only be here if logged in anyways
-	User usr = Helper.getUserByID(userID);
+	
 	%>	
 	
 		function updateProfile() {
@@ -47,13 +70,9 @@
 <body>
 
 	<%	
-	int otherID = -1;
-	if (request.getParameter("otherID") != null) {
-		String otherIDStr = "" + request.getParameter("otherID");
-		if (otherIDStr != null && !otherIDStr.trim().equals("")) {
-			otherID = Integer.parseInt(otherIDStr.trim());
-		}
-	}
+	
+	
+	
 	%>
 
 	<div id="Profile_Page">

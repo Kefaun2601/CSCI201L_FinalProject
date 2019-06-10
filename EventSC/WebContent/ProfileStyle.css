@@ -406,6 +406,13 @@ a {
 	width: 35%;
 }
 
+#ImageUpload {
+	position: absolute;
+	z-index: 10;
+	top: 20%;
+}
+
+
 ::placeholder { 
   color: #c3c3c3;
 }
