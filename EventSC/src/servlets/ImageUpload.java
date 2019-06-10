@@ -3,6 +3,7 @@ package servlets;
 import java.io.*;
 import java.util.*;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -79,12 +80,6 @@ public class ImageUpload extends HttpServlet {
 			// Process the uploaded file items
 			Iterator i = fileItems.iterator();
 
-			out.println("<html>");
-			out.println("<head>");
-			out.println("<title>Servlet upload</title>");
-			out.println("</head>");
-			out.println("<body>");
-
 			while (i.hasNext()) {
 				FileItem fi = (FileItem) i.next();
 				if (!fi.isFormField()) {
@@ -110,8 +105,8 @@ public class ImageUpload extends HttpServlet {
 					out.println("Uploaded Filename: " + fileName + "<br>");
 				}
 			}
-			out.println("</body>");
-			out.println("</html>");
+			RequestDispatcher dispatch = getServletContext().getRequestDispatcher("/profile.jsp");
+			  dispatch.forward(request,response);
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}

@@ -409,7 +409,8 @@ a {
 #ImageUpload {
 	position: absolute;
 	z-index: 10;
-	top: 20%;
+	top: 65%;
+	left: 25%;
 }
 
 

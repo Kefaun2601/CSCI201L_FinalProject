@@ -121,7 +121,8 @@
 		</div>
 		<div id="Group_16">
 			<div id="user">
-				<img id="userpic" src="<%= usr.getProfilepic().substring(0,usr.getProfilepic().length()-4) %>_redcircle.png">
+				<!-- <img id="userpic" src="<%= usr.getProfilepic().substring(0,usr.getProfilepic().length()-4) %>_redcircle.png"> -->
+				<img id="userpic" src="<%= usr.getProfilepic() %>">
 			</div>
 			<% if (otherID == -1) { %><form id="profileForm" name="profileForm" method="post" action="index.jsp" onsubmit="updateProfile()"><% } %>
 				<div id="profileInfo">
@@ -136,6 +137,9 @@
 					<div id="phoneInfo">Phone: <input name="phone" id="formPhone" class="formInput" value="<%= (usr.getPhone() == null || usr.getPhone().equals("")) ? "" : usr.getPhone() %>" placeholder=" Phone Number..." /></div>
 					<div id="majorInfo">Major: <input name="major" id="formMajor" class="formInput" value="<%= (usr.getMajor() == null || usr.getMajor().equals("")) ? "" : usr.getMajor() %>" placeholder=" Major..." /></div>
 					<div id="gradyearInfo">Grad Year: <input name="gradyear" id="formGradYear" class="formInput" value="<%= usr.getGradyear() %>" placeholder=" Graduation Year..." /></div>
+					<div id="ImageUpload">
+					
+					</div>
 					<% } else { // viewing other user %>
 					<div id="firstInfo">First: <%= usr.getFname() %></div>
 					<div id="lastInfo">Last: <%= usr.getLname() %></div>
@@ -148,6 +152,11 @@
 				</div>
 				<% if (otherID == -1) { %><input type="image" id="profileSaveChanges" src="img/save_changes_button.png" />
 			</form><% } %>
+			<form action = "ImageUpload" id="ImageUpload" method = "post" enctype = "multipart/form-data">
+       				<input type = "file" name = "file" size = "50" />
+				    <br />
+				    <input type = "submit" value = "Upload File" />
+			</form>
 		</div>
 	</div>
 <script>

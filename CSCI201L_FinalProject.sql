@@ -19,7 +19,7 @@ CREATE TABLE Activities (
 	activityID INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
     userID INT(11) NOT NULL,
     title VARCHAR(45),
-    description VARCHAR(45),
+    description VARCHAR(300),
     lat FLOAT(10,6), -- xxxx.xxxxxx
     lon FLOAT(10,6), -- xxxx.xxxxxx
     startDate VARCHAR(10), -- YYYY-MM-DD
