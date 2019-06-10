@@ -18,7 +18,6 @@
 			userID = Integer.parseInt(userIDStr.trim());
 		}
 	}
-	System.out.println(userID);
 	
 	// unchecked if userID == -1 but they should only be here if logged in anyways
 	User usr = Helper.getUserByID(userID);
@@ -32,9 +31,9 @@
 			var phone = document.getElementById("formPhone").value;
 			var major = document.getElementById("formMajor").value;
 			var gradyear = document.getElementById("formGradYear").value;
-			
+			var id = <%=userID%>;
 			var xhttp = new XMLHttpRequest();
-			xhttp.open("GET", "?userID=<%= userID %>" +
+			xhttp.open("GET", "UpdateProfile?userID=" + id +
 						"&fname=" + fname +
 						"&lname=" + lname +
 						"&email=" + email +
@@ -113,12 +112,12 @@
 					if (otherID == -1) { // viewing him/herself
 					%>
 					<!-- MAKE SURE THERE IS AN EXTRA SPACE IN FRONT OF VALUE -->
-					<div id="firstInfo">First: <input name="fname" id="formFirstName" class="formInput" value="<%= (usr.getFname() == null || usr.getFname().equals("")) ? "" : " "+usr.getFname() %>" placeholder=" First Name..." /></div>
-					<div id="lastInfo">Last: <input name="lname" id="formLastName" class="formInput" value="<%= (usr.getLname() == null || usr.getLname().equals("")) ? "" : " "+usr.getLname() %>" placeholder=" Last Name..." /></div>
-					<div id="emailInfo">Email: <input name="email" id="formEmail" class="formInput" value="<%= (usr.getEmail() == null || usr.getEmail().equals("")) ? "" : " "+usr.getEmail() %>" placeholder=" Email..." /></div>
-					<div id="phoneInfo">Phone: <input name="phone" id="formPhone" class="formInput" value="<%= (usr.getPhone() == null || usr.getPhone().equals("")) ? "" : " "+usr.getPhone() %>" placeholder=" Phone Number..." /></div>
-					<div id="majorInfo">Major: <input name="major" id="formMajor" class="formInput" value="<%= (usr.getMajor() == null || usr.getMajor().equals("")) ? "" : " "+usr.getMajor() %>" placeholder=" Major..." /></div>
-					<div id="gradyearInfo">Grad Year: <input name="gradyear" id="formGradYear" class="formInput" value="<%= " "+usr.getGradyear() %>" placeholder=" Graduation Year..." /></div>
+					<div id="firstInfo">First: <input name="fname" id="formFirstName" class="formInput" value="<%= (usr.getFname() == null || usr.getFname().equals("")) ? "" : usr.getFname() %>" placeholder=" First Name..." /></div>
+					<div id="lastInfo">Last: <input name="lname" id="formLastName" class="formInput" value="<%= (usr.getLname() == null || usr.getLname().equals("")) ? "" : usr.getLname() %>" placeholder=" Last Name..." /></div>
+					<div id="emailInfo">Email: <input name="email" id="formEmail" class="formInput" value="<%= (usr.getEmail() == null || usr.getEmail().equals("")) ? "" : usr.getEmail() %>" placeholder=" Email..." /></div>
+					<div id="phoneInfo">Phone: <input name="phone" id="formPhone" class="formInput" value="<%= (usr.getPhone() == null || usr.getPhone().equals("")) ? "" : usr.getPhone() %>" placeholder=" Phone Number..." /></div>
+					<div id="majorInfo">Major: <input name="major" id="formMajor" class="formInput" value="<%= (usr.getMajor() == null || usr.getMajor().equals("")) ? "" : usr.getMajor() %>" placeholder=" Major..." /></div>
+					<div id="gradyearInfo">Grad Year: <input name="gradyear" id="formGradYear" class="formInput" value="<%= usr.getGradyear() %>" placeholder=" Graduation Year..." /></div>
 					<% } else { // viewing other user %>
 					<div id="firstInfo">First: <%= usr.getFname() %></div>
 					<div id="lastInfo">Last: <%= usr.getLname() %></div>

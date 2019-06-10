@@ -11,15 +11,8 @@
 	<title>EventSC</title>
 	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="DetailStyle.css"/>
 	<%  
-		//debug use
-		Activity activity = new Activity();
-		if(request.getParameter("activityID")!=null){
-			int activityID=Integer.parseInt(request.getParameter("activityID"));
-			activity = Helper.getActivityByID(activityID);
-		}
-		else{
-			
-		}
+	int activityID = Integer.parseInt(request.getParameter("activityID"));
+	Activity activity = Helper.getActivityByID(activityID);
 	%>
 	<script>
 			
@@ -65,7 +58,7 @@
 	%>
 
 <div id="Detail_Page">
-	<div id="Group_18">
+	<div id="Group_18"><%=userID%>
 		<svg class="Rectangle_4">
 			
 		</svg>

@@ -34,49 +34,49 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-		db.executeUpdate("UPDATE User SET email = \"" + email + "\" WHERE userID = " + this.userID + ";");
+		db.executeUpdate("UPDATE Users SET email = \"" + email + "\" WHERE userID = " + this.userID + ";");
 	}
 	public String getFname() {
 		return fname;
 	}
 	public void setFname(String fname) {
 		this.fname = fname;
-		db.executeUpdate("UPDATE User SET fname = \"" + fname + "\" WHERE userID = " + this.userID + ";");
+		db.executeUpdate("UPDATE Users SET fname = \"" + fname + "\" WHERE userID = " + this.userID + ";");
 	}
 	public String getLname() {
 		return lname;
 	}
 	public void setLname(String lname) {
 		this.lname = lname;
-		db.executeUpdate("UPDATE User SET lname = \"" + lname + "\" WHERE userID = " + this.userID + ";");
+		db.executeUpdate("UPDATE Users SET lname = \"" + lname + "\" WHERE userID = " + this.userID + ";");
 	}
 	public String getPhone() {
 		return phone;
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
-		db.executeUpdate("UPDATE User SET phone = \"" + phone + "\" WHERE userID = " + this.userID + ";");
+		db.executeUpdate("UPDATE Users SET phone = \"" + phone + "\" WHERE userID = " + this.userID + ";");
 	}
 	public String getProfilepic() {
 		return profilepic;
 	}
 	public void setProfilepic(String profilepic) {
 		this.profilepic = profilepic;
-		db.executeUpdate("UPDATE User SET profilepic = \"" + profilepic + "\" WHERE userID = " + this.userID + ";");
+		db.executeUpdate("UPDATE Users SET profilepic = \"" + profilepic + "\" WHERE userID = " + this.userID + ";");
 	}
 	public int getGradyear() {
 		return gradyear;
 	}
 	public void setGradyear(int gradyear) {
 		this.gradyear = gradyear;
-		db.executeUpdate("UPDATE User SET gradyear = \"" + gradyear + "\" WHERE userID = " + this.userID + ";");
+		db.executeUpdate("UPDATE Users SET gradyear = \"" + gradyear + "\" WHERE userID = " + this.userID + ";");
 	}
 	public String getMajor() {
 		return major;
 	}
 	public void setMajor(String major) {
 		this.major = major;
-		db.executeUpdate("UPDATE User SET major = \"" + major + "\" WHERE userID = " + this.userID + ";");
+		db.executeUpdate("UPDATE Users SET major = \"" + major + "\" WHERE userID = " + this.userID + ";");
 	}
 
 	

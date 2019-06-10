@@ -18,15 +18,48 @@
 			xhttp.send();
 			if (xhttp.responseText.trim() == "1") {
 				// set error message div to "The passwords do not match." here
+				document.getElementById("ErrorMessage").innerHTML = "The passwords do not match.";
 				return false;
 			}
 			else if (xhttp.responseText.trim() == "2") {
 				// set error message div to "The username is already taken." here
+				document.getElementById("ErrorMessage").innerHTML = "The username is already taken.";
+				return false;
+			}
+			else if (xhttp.responseText.trim() == "3") {
+				// set error message div to "Fields cannot be empty." here
+				document.getElementById("ErrorMessage").innerHTML = "Fields cannot be empty.";
+				return false;
+			}
+			else if (xhttp.responseText.trim() == "4") {
+				// set error message div to "Not a USC registered email." here
+				document.getElementById("ErrorMessage").innerHTML = "Not a USC registered email.";
 				return false;
 			}
 			return true;
 		}
 	</script>
+	<style>
+	#ErrorMessage {
+	opacity: 1;
+	position: absolute;
+	left: 0%;
+	top: 205%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 204px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Sukhumvit Set;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	color: rgba(193, 31, 31, 1);
+	letter-spacing: 0.1px;
+}
+	</style>
 </head>
 <body>
 <div id="Register">
@@ -81,6 +114,7 @@
 					<span>Confirm Password</span>
 					<br/>
 					<input type="password" class="registerInput" name="passwordConf" />
+					<span id="ErrorMessage"></span>
 				</div>
 			</form>
 		</div>

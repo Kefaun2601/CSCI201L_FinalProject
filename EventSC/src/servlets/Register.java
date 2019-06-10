@@ -74,8 +74,16 @@ public class Register extends HttpServlet {
 		//		0 - successful registration
 		//		1 - passwords don't match
 		//		2 - username taken
+		//		3 - empty fields
+		//		4 - not a USC registered email
+		
+		if(username.length() == 0 
+			|| password.length() == 0 
+			|| passwordConf.length() == 0) return 3;
 		
 		if (!password.equals(passwordConf)) return 1;
+		
+		if(!username.endsWith("@usc.edu")) return 4;
 		
 		int userID = getUserIDByUsername(username);
 		if (userID != -1) return 2;
